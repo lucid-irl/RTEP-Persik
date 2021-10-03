@@ -1,0 +1,23 @@
+.sign-up-wrapper{
+  background-color: #fd79a8;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .sign-up-form{
+    background-color: #ffffff;
+
+  }
+  .image{
+    background-image: url(https://thumbs.dreamstime.com/b/peach-leaf-peach-fruit-icon-isolated-white-background-vector-illustration-peach-fruit-icon-157352917.jpg);
+    background-size: 100px 100px;
+  }
+ .signup-link {
+  font-size: .8rem;
+  font-weight: 600;
+  text-decoration: underline;
+  color: #999;
+  &:focus,
+  &:hover {color: darken(#999, 13%);}
+}
+}
