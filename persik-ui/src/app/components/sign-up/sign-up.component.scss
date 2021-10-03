@@ -1,23 +1,102 @@
-.sign-up-wrapper{
-  background-color: #fd79a8;
-  height: 100vh;
+$persik-button-color: #f8c3bd;
+$persik-background: #fbe7e8;
+$persik-unhover-text-button-color: #e84393;
+$persik-hover-text-button-color: #5a4856;
+$persik-textbox-border-color: #e84393;
+
+input {
+  background: none;
+  border: none;
+}
+
+.wrapper {
+  background-color: $persik-background;
   display: flex;
   justify-content: center;
   align-items: center;
-  .sign-up-form{
-    background-color: #ffffff;
+  height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+}
 
+.sign-up-wrapper{
+  height: 550px;
+  width: 800px;
+  border-radius: 5px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .image-container {
+    height: 100%;
+    width: 50%;
+    background-repeat: no-repeat, repeat;
+    background-image: url("../../../assets/images/yousef-espanioly-P7WqEh2_3t8.jpg");
+    background-position: center;
+    background-size: cover;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
   }
-  .image{
-    background-image: url(https://thumbs.dreamstime.com/b/peach-leaf-peach-fruit-icon-isolated-white-background-vector-illustration-peach-fruit-icon-157352917.jpg);
-    background-size: 100px 100px;
+  .sign-up-form{
+    width: 50%;
+    .title {
+      font-weight: bold;
+      font-size: 40px;
+      text-align: center;
+      margin-bottom: 20px;
+
+    }
+    form {
+      padding: 0 40px;
+      .input-title {
+          margin-bottom: 1px;
+      }
+      .input {
+          height:25px;
+          width: 100%;
+          border: 1px solid $persik-textbox-border-color;
+      }
+      .input:focus{
+          outline: none;
+      }
+      .input-title{
+        margin-top: 5px;
+      }
+    }
+    .sign-up-button-wrapper {
+      display: flex;
+      justify-content: center;
+      button {
+          margin:0 auto;
+          all: unset;
+          width: 200px;
+          height:40px;
+          margin-top: 15px;
+          border: 1px solid $persik-button-color;
+          outline: none;
+          text-align: center;
+          transition: all .3s;
+          color: $persik-unhover-text-button-color;
+      }
+      button:hover {
+          background-color: $persik-button-color;
+          color: $persik-hover-text-button-color;
+      }
   }
- .signup-link {
-  font-size: .8rem;
-  font-weight: 600;
-  text-decoration: underline;
-  color: #999;
-  &:focus,
-  &:hover {color: darken(#999, 13%);}
+  }
+  .signup-link {
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 15px;
+    display: flex;
+    font-weight: 600;
+    text-decoration: underline;
+    color: $persik-unhover-text-button-color;
+    &:hover {color: $persik-hover-text-button-color;}
+  }
 }
-}
+
+
+
+
+
