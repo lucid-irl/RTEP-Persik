@@ -52,9 +52,11 @@ input {
           margin-bottom: 1px;
       }
       .input {
-          height:25px;
+          height:28px;
           width: 100%;
           border: 1px solid $persik-textbox-border-color;
+          font-family: inherit;
+          padding-left: 10px;
       }
       .input:focus{
           outline: none;
