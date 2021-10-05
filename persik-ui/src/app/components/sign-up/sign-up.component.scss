@@ -34,8 +34,8 @@ input {
     background-image: url("../../../assets/images/yousef-espanioly-P7WqEh2_3t8.jpg");
     background-position: center;
     background-size: cover;
-    border-bottom-right-radius: 5px;
-    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
   }
   .sign-up-form{
     width: 50%;
@@ -57,6 +57,7 @@ input {
           border: 1px solid $persik-textbox-border-color;
           font-family: inherit;
           padding-left: 10px;
+          border-radius: 4px;
       }
       .input:focus{
           outline: none;
@@ -86,12 +87,13 @@ input {
       }
   }
   }
-  .signup-link {
+  .login-link {
     justify-content: center;
     margin-bottom: 20px;
     margin-top: 15px;
     display: flex;
     font-weight: 600;
+    font-size: 12px;
     text-decoration: underline;
     color: $persik-unhover-text-button-color;
     &:hover {color: $persik-hover-text-button-color;}
