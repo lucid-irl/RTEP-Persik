@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { LoginComponent } from './components/login/login.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
+import { AuthenticationMethodComponent } from './authentication-method/authentication-method.component';
 
 
 
@@ -15,7 +16,8 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
     AppComponent,
     SignUpComponent,
     LoginComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    AuthenticationMethodComponent
   ],
   imports: [
     BrowserModule,
