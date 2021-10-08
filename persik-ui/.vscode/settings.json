@@ -1,0 +1,4 @@
+{
+    "terminal.integrated.defaultProfile.windows": "C:\\Windows\\System32\\ps.exe",
+    "git.ignoreLimitWarning": true
+}

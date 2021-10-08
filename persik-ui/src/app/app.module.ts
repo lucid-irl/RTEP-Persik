@@ -8,6 +8,7 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { LoginComponent } from './components/login/login.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { AuthenticationMethodComponent } from './authentication-method/authentication-method.component';
+import { LargeArticleComponent } from './components/large-article/large-article.component';
 
 
 
@@ -17,7 +18,8 @@ import { AuthenticationMethodComponent } from './authentication-method/authentic
     SignUpComponent,
     LoginComponent,
     ForgotPasswordComponent,
-    AuthenticationMethodComponent
+    AuthenticationMethodComponent,
+    LargeArticleComponent
   ],
   imports: [
     BrowserModule,

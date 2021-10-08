@@ -4,8 +4,10 @@ import { LoginComponent } from './components/login/login.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { ForgotPasswordComponent} from './components/forgot-password/forgot-password.component';
 import { AuthenticationMethodComponent } from './authentication-method/authentication-method.component';
+import { LargeArticleComponent } from './components/large-article/large-article.component';
 
 const routes: Routes = [
+  {path: 'home', component: LargeArticleComponent},
   {path: 'login', component: LoginComponent},
   {path: 'sign-up', component: SignUpComponent},
   {path: 'forgot-password', component: ForgotPasswordComponent},
