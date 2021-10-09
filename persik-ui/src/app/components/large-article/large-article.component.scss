@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 $persik-tag-font-family: "Noto Sans", sans-serif;
 $persik-tag-font-size: 16px;
@@ -24,7 +25,7 @@ $persik-extension-container-font-family: "Noto Sans", sans-serif;
 
 .large-article-container {
   display: flex;
-  border: 1px solid red;
+  background-color: white;
   width: 400px;
   padding: 10px;
   border-radius: 4px;

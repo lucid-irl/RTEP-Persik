@@ -1,0 +1,51 @@
+<div>
+  <nav>
+    <div class="navigation">
+      <ul class="top-level-menu">
+        <li><a href="/home">Home</a></li>
+        <li>
+          <a href="">Tags</a>
+          <ul class="second-level-menu">
+            <li>#giadinh</li>
+            <li>#tinhyeu</li>
+            <li>#timnguoi</li>
+            <li>#hoidap</li>
+          </ul>
+        </li>
+        <li><a href="/anonymous">Anonymous</a></li>
+        <li><a href="/poll">Poll</a></li>
+      </ul>
+    </div>
+    <div class="account">
+      <div class="search-container">
+        <input type="search" name="" id="">
+        <button>🔍</button>
+      </div>
+      <div class="mail">
+        <button>📭</button>
+      </div>
+      <div class="notification-container">
+        <button (click)="activeNotification()">🔔</button>
+        <ul class="notification" [class]="notificationActive">
+          <li>Thông báo các kiểu </li>
+          <li>Thông báo các kiểu </li>
+          <li>Thông báo các kiểu </li>
+          <li>Thông báo các kiểu </li>
+          <li>Thông báo các kiểu </li>
+        </ul>
+      </div>
+      <div class="avatar">
+        <div class="image-container">
+          <img src="../../../assets/images/julian-wan-WNoLnJo7tS8-unsplash.jpg" alt="">
+        </div>
+      </div>
+      <div class="write">
+        <a href="" class="write-title">Write</a>
+        <ul class="write-option">
+          <li>Write a blog</li>
+          <li>Write a poll</li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
