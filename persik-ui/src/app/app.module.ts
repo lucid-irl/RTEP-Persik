@@ -12,6 +12,7 @@ import { LargeArticleComponent } from './components/large-article/large-article.
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { AnonymousBoxComponent } from './components/anonymous-box/anonymous-box.component';
 import { AnonymousItemComponent } from './components/anonymous-item/anonymous-item.component';
+import { AnonymousArticleComponent } from './components/anonymous-article/anonymous-article.component';
 
 
 
@@ -25,7 +26,8 @@ import { AnonymousItemComponent } from './components/anonymous-item/anonymous-it
     LargeArticleComponent,
     NavbarComponent,
     AnonymousBoxComponent,
-    AnonymousItemComponent
+    AnonymousItemComponent,
+    AnonymousArticleComponent
   ],
   imports: [
     BrowserModule,
