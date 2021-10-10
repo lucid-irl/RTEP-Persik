@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+$persik-tag-font-family: "Noto Sans", sans-serif;
+$persik-tag-font-size: 16px;
+
+$persik-title-font-family: "Montserrat";
+$persik-title-font-size: 30px;
+
+$persik-short-content-font-family: "Noto Sans", sans-serif;
+$persik-short-content-font-size: 16px;
+
+$persik-writer-name-font-family: "Noto Sans", sans-serif;
+$persik-writer-name-font-size: 12px;
+
+$persik-public-date-font-family: "Noto Sans", sans-serif;
+$persik-public-date-font-size: 10px;
+
+$persik-vote-font-family: "Noto Sans", sans-serif;
+$persik-unactive-vote-color: #ecf0f1;
+$persik-active-vote-color: #2ecc71;
+
+$persik-extension-container-font-family: "Noto Sans", sans-serif;
+
+.anonymous-item-wrapper {
+  display: flex;
+  background-color: white;
+  max-width: 400px;
+  padding: 10px;
+  border-radius: 4px;
+  flex-flow: column;
+  margin-bottom: 5px;
+  padding: 10px;
+
+  .main-content {
+
+    .tag-container {
+      .tag {
+        font-family: $persik-tag-font-family;
+        font-size: $persik-tag-font-size;
+      }
+    }
+    .title-container {
+      .title {
+        font-family: $persik-title-font-family;
+        font-size: $persik-title-font-size;
+      }
+    }
+    .short-content {
+      p {
+        font-family: $persik-short-content-font-family;
+        font-size: $persik-short-content-font-size;
+      }
+    }
+    .extension-function {
+      display: flex;
+      .extension-container {
+        display: flex;
+        align-items: flex-end;
+        font-family: $persik-extension-container-font-family;
+        font-size: 15px;
+        justify-content: space-around;
+        gap: 10px;
+        .view {
+          .view-icon {
+            margin-right: 5px;
+          }
+        }
+        .comment {
+          .comment-icon {
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+}
