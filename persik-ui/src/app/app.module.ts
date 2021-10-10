@@ -15,6 +15,8 @@ import { NotificationItemComponent } from './components/notification-item/notifi
 import { AnonymousBoxComponent } from './components/anonymous-box/anonymous-box.component';
 import { AnonymousItemComponent } from './components/anonymous-item/anonymous-item.component';
 import { AnonymousArticleComponent } from './components/anonymous-article/anonymous-article.component';
+import { AnonymousPageComponent } from './components/anonymous-page/anonymous-page.component';
+import { AnonymousCommentComponent } from './components/anonymous-comment/anonymous-comment.component';
 
 
 
@@ -31,7 +33,9 @@ import { AnonymousArticleComponent } from './components/anonymous-article/anonym
     NotificationItemComponent,
     AnonymousBoxComponent,
     AnonymousItemComponent,
-    AnonymousArticleComponent
+    AnonymousArticleComponent,
+    AnonymousPageComponent,
+    AnonymousCommentComponent
   ],
   imports: [
     BrowserModule,
