@@ -1,0 +1,16 @@
+<div class="anonymous-box-container">
+  <div class="boxed">
+    <div class="title">
+      <span>Anonymous</span>
+    </div>
+    <ul>
+      <li >
+        <app-anonymous-item
+        *ngFor = "let anony_item of anony_items"
+        title={{anony_item.title}}
+        content={{anony_item.content}}>
+      </app-anonymous-item>
+      </li>
+    </ul>
+  </div>
+</div>

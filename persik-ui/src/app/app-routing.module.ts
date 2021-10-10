@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { ForgotPasswordComponent} from './components/forgot-password/forgot-password.component';
-import { AuthenticationMethodComponent } from './authentication-method/authentication-method.component';
+import { AuthenticationMethodComponent } from './components/authentication-method/authentication-method.component';
 import { LargeArticleComponent } from './components/large-article/large-article.component';
 
 const routes: Routes = [
