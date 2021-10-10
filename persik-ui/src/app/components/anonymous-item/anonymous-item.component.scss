@@ -32,7 +32,9 @@ $persik-extension-container-font-family: "Noto Sans", sans-serif;
   flex-flow: column;
   margin-bottom: 5px;
   padding: 10px;
-
+  &:hover{
+    background-color: #f4f4f7;
+  }
   .main-content {
 
     .tag-container {
@@ -74,5 +76,6 @@ $persik-extension-container-font-family: "Noto Sans", sans-serif;
         }
       }
     }
+
   }
 }
