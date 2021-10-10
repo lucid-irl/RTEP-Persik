@@ -27,7 +27,9 @@
       <div class="notification-container">
         <button (click)="activeNotification()">🔔</button>
         <div class="notification" [class]="notificationActive">
-          <app-notification-item *ngFor="let notification of notifications" [avatarUrl]="notification.avatarUrl" [notificationContent]="notification.notificationContent" [publicDate]="notification.publicDate"></app-notification-item>
+          <app-notification-item *ngFor="let notification of notifications" [avatarUrl]="notification.avatarUrl"
+            [notificationContent]="notification.notificationContent" [publicDate]="notification.publicDate">
+          </app-notification-item>
         </div>
       </div>
       <div class="avatar">
@@ -36,10 +38,10 @@
         </div>
       </div>
       <div class="write">
-        <a href="" class="write-title">Write</a>
+        <span>Write</span> 
         <ul class="write-option">
-          <li><span>📃</span> A Post</li>
-          <li><span>📊</span> A Poll</li>
+          <li><a href="/write-post"><span>📃</span> A Post</a></li>
+          <li><a href=""><span>📊</span> A Poll</a> </li>
         </ul>
       </div>
     </div>

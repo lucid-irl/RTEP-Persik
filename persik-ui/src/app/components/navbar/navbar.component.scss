@@ -98,6 +98,9 @@ nav {
       }
     }
     .write {
+      position: relative;
+      border-radius: 4px;
+      padding: 20px 30px;
       display: inline-block;
       position: relative;
       .write-title {
@@ -116,12 +119,16 @@ nav {
           }
         }
       }
+      &:hover {
+        background-color: #f4f4f7;
+        
+      }
       &:hover > .write-option{
         display: inline;
         position: absolute;
         background-color: white;
         width: 130px;
-        top: 30px;
+        top: 60px;
         left: -10px;
         padding: 10px;
         border-radius: 4px;
