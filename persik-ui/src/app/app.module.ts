@@ -10,6 +10,8 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
 import { AuthenticationMethodComponent } from './authentication-method/authentication-method.component';
 import { LargeArticleComponent } from './components/large-article/large-article.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { SuperLargeArticleComponent } from './components/super-large-article/super-large-article.component';
+import { NotificationItemComponent } from './components/notification-item/notification-item.component';
 
 
 
@@ -21,7 +23,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     ForgotPasswordComponent,
     AuthenticationMethodComponent,
     LargeArticleComponent,
-    NavbarComponent
+    NavbarComponent,
+    SuperLargeArticleComponent,
+    NotificationItemComponent
   ],
   imports: [
     BrowserModule,
