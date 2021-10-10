@@ -1,0 +1,37 @@
+$persik-button-color: #f8c3bd;
+$persik-background: #fbe7e8;
+
+$persik-title-font-family: "Noto Sans", sans-serif;
+$persik-title-font-size: 25px;
+
+.anonymous-page-container {
+  background-color: $persik-background;
+  max-width: auto;
+  height: 800px;
+  border-radius: 4px;
+  height: auto;
+  border: 1px solid $persik-button-color;
+  padding: 5px;
+  .anonymous-content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    .wrapper-comment {
+      .thread {
+        font-family: $persik-title-font-family;
+        font-size: $persik-title-font-size;
+      }
+      .anonymous-comment {
+        height: 80vh;
+        overflow-y: auto;
+      }
+      .input {
+      }
+    }
+    .anonymous-article {
+      height: 80vh;
+      overflow-y: auto;
+    }
+  }
+}

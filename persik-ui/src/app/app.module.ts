@@ -16,6 +16,10 @@ import { AnonymousBoxComponent } from './components/anonymous-box/anonymous-box.
 import { AnonymousItemComponent } from './components/anonymous-item/anonymous-item.component';
 import { PostEditorComponent } from './components/post-editor/post-editor.component';
 import { QuillModule } from 'ngx-quill';
+import { AnonymousArticleComponent } from './components/anonymous-article/anonymous-article.component';
+import { AnonymousPageComponent } from './components/anonymous-page/anonymous-page.component';
+import { AnonymousCommentComponent } from './components/anonymous-comment/anonymous-comment.component';
+
 
 
 @NgModule({
@@ -31,7 +35,10 @@ import { QuillModule } from 'ngx-quill';
     NotificationItemComponent,
     AnonymousBoxComponent,
     AnonymousItemComponent,
-    PostEditorComponent
+    PostEditorComponent,
+    AnonymousArticleComponent,
+    AnonymousPageComponent,
+    AnonymousCommentComponent
   ],
   imports: [
     BrowserModule,

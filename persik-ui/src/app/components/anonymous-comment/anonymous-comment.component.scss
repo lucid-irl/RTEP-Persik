@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+
+$persik-short-content-font-family: "Noto Sans", sans-serif;
+$persik-short-content-font-size: 12px;
+
+$persik-writer-name-font-family: "Noto Sans", sans-serif;
+$persik-writer-name-font-size: 12px;
+
+$persik-public-date-font-family: "Noto Sans", sans-serif;
+$persik-public-date-font-size: 10px;
+
+$persik-extension-container-font-family: "Noto Sans", sans-serif;
+
+.anonymous-comment-wrapper {
+  display: flex;
+  background-color: white;
+  max-width: 400px;
+  padding: 10px;
+  border-radius: 4px;
+  flex-flow: column;
+  margin-bottom: 5px;
+  padding: 10px;
+  &:hover {
+    background-color: #f4f4f7;
+  }
+  .comment {
+    font-family: $persik-short-content-font-family;
+    font-size: $persik-short-content-font-size;
+  }
+  .date{
+    font-family: $persik-public-date-font-family;
+    font-size: $persik-public-date-font-size;
+  }
+}

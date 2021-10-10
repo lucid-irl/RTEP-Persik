@@ -6,6 +6,7 @@ import { ForgotPasswordComponent} from './components/forgot-password/forgot-pass
 import { AuthenticationMethodComponent } from './components/authentication-method/authentication-method.component';
 import { LargeArticleComponent } from './components/large-article/large-article.component';
 import { PostEditorComponent } from './components/post-editor/post-editor.component';
+import { AnonymousPageComponent } from './components/anonymous-page/anonymous-page.component';
 
 const routes: Routes = [
   {path: 'home', component: LargeArticleComponent},
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path: 'forgot-password', component: ForgotPasswordComponent},
   {path: 'authentication-method', component: AuthenticationMethodComponent},
   {path: 'write-post', component: PostEditorComponent}
+  {path: 'anonymous', component: AnonymousPageComponent},
 ];
 
 @NgModule({
