@@ -1,4 +1,8 @@
 @import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";  /* required */
+@import '~quill/dist/quill.core.css';
+@import '~quill/dist/quill.bubble.css';
+@import '~quill/dist/quill.snow.css';
 
 body {
     background-color: #f4f4f7;

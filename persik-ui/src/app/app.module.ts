@@ -14,7 +14,8 @@ import { SuperLargeArticleComponent } from './components/super-large-article/sup
 import { NotificationItemComponent } from './components/notification-item/notification-item.component';
 import { AnonymousBoxComponent } from './components/anonymous-box/anonymous-box.component';
 import { AnonymousItemComponent } from './components/anonymous-item/anonymous-item.component';
-
+import { PostEditorComponent } from './components/post-editor/post-editor.component';
+import { QuillModule } from 'ngx-quill';
 
 
 @NgModule({
@@ -29,11 +30,13 @@ import { AnonymousItemComponent } from './components/anonymous-item/anonymous-it
     SuperLargeArticleComponent,
     NotificationItemComponent,
     AnonymousBoxComponent,
-    AnonymousItemComponent
+    AnonymousItemComponent,
+    PostEditorComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule, 
+    QuillModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
