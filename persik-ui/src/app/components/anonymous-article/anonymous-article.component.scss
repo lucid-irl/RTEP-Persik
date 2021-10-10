@@ -3,19 +3,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 $persik-tag-font-family: "Noto Sans", sans-serif;
-$persik-tag-font-size: 16px;
+$persik-tag-font-size: 10px;
 
 $persik-title-font-family: "Montserrat";
-$persik-title-font-size: 30px;
+$persik-title-font-size: 17px;
 
 $persik-short-content-font-family: "Noto Sans", sans-serif;
-$persik-short-content-font-size: 16px;
+$persik-short-content-font-size: 14px;
 
-$persik-writer-name-font-family: "Noto Sans", sans-serif;
-$persik-writer-name-font-size: 12px;
+
 
 $persik-public-date-font-family: "Noto Sans", sans-serif;
-$persik-public-date-font-size: 10px;
+$persik-public-date-font-size: 8px;
 
 $persik-vote-font-family: "Noto Sans", sans-serif;
 $persik-unactive-vote-color: #ecf0f1;
@@ -26,22 +25,28 @@ $persik-extension-container-font-family: "Noto Sans", sans-serif;
 .anonymous-article-container {
   display: flex;
   background-color: white;
-  width: 400px;
-  padding: 10px;
+  width: 600px;
+  padding: 20px;
   border-radius: 4px;
   flex-flow: column;
+  margin-bottom: 5px;
+  &:hover{
+    background-color: #f4f4f7;
+  }
 
   .main-content {
     .tag-container {
       .tag {
         font-family: $persik-tag-font-family;
         font-size: $persik-tag-font-size;
+        padding-bottom: 5px;
       }
     }
     .title-container {
       .title {
         font-family: $persik-title-font-family;
         font-size: $persik-title-font-size;
+        font-weight: bold;
       }
     }
     .short-content {
