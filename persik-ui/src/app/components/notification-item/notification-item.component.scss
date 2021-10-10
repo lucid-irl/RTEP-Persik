@@ -1,0 +1,31 @@
+.notification-item {
+  display: flex;
+  flex-direction: row;
+  border-radius: 4px;
+  padding: 10px;
+  &:hover {
+    background-color: #f4f4f7;
+  }
+  .avatar-container {
+    margin-right: 10px;
+    .image-container {
+      display: block;
+      flex-shrink: 0;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        border-radius: inherit;
+      }
+    }
+  }
+  .infomation-container {
+  }
+  .extension {
+  }
+}

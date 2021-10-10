@@ -10,6 +10,8 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
 import { AuthenticationMethodComponent } from './components/authentication-method/authentication-method.component';
 import { LargeArticleComponent } from './components/large-article/large-article.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { SuperLargeArticleComponent } from './components/super-large-article/super-large-article.component';
+import { NotificationItemComponent } from './components/notification-item/notification-item.component';
 import { AnonymousBoxComponent } from './components/anonymous-box/anonymous-box.component';
 import { AnonymousItemComponent } from './components/anonymous-item/anonymous-item.component';
 import { AnonymousArticleComponent } from './components/anonymous-article/anonymous-article.component';
@@ -25,6 +27,8 @@ import { AnonymousArticleComponent } from './components/anonymous-article/anonym
     AuthenticationMethodComponent,
     LargeArticleComponent,
     NavbarComponent,
+    SuperLargeArticleComponent,
+    NotificationItemComponent,
     AnonymousBoxComponent,
     AnonymousItemComponent,
     AnonymousArticleComponent

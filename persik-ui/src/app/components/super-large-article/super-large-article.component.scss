@@ -1,0 +1,84 @@
+@import "../../../assets/styles/persik.scss";
+
+.article-container {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  border-radius: 4px;
+  max-width: 800px;
+  padding: 10px;
+  .tag-container {
+    margin-bottom: 10px;
+    span {
+      font-family: "Noto sans", sans-serif;
+      font-weight: lighter;
+    }
+  }
+
+  .image-container {
+    width: 50%;
+    height: 100%;
+    margin-right: 10px;
+    img {
+      border-radius: 4px;
+      display: block;
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+  .article-infomation {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    .title-container {
+      padding-bottom: 10px;
+      span {
+        font-family: "Montserrat", sans-serif;
+        font-weight: bold;
+        font-size: 25px;
+      }
+    }
+    .short-content-container {
+      margin-bottom: 20px;
+      span {
+        font-family: "Noto Sans", sans-serif;
+        font-size: 15px;
+        color: #b5b5b5;
+      }
+    }
+    .extension-container {
+      flex-grow: 2;
+      display: flex;
+      font-family: $persik-extension-container-font-family;
+      font-size: 15px;
+      align-items: flex-end;
+      justify-content: flex-end;
+      gap: 10px;
+      .vote {
+        display: flex;
+        cursor: pointer;
+        -webkit-user-select: none; /* Safari */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* IE10+/Edge */
+        user-select: none; /* Standard */
+        .upvote {
+          margin-right: 5px;
+          color: $persik-unactive-vote-color;
+        }
+        .active {
+          color: $persik-active-vote-color;
+        }
+      }
+      .view {
+        .view-icon {
+          margin-right: 5px;
+        }
+      }
+      .comment {
+        .comment-icon {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}
