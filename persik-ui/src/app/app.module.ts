@@ -7,9 +7,11 @@ import { AppComponent } from './app.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { LoginComponent } from './components/login/login.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
-import { AuthenticationMethodComponent } from './authentication-method/authentication-method.component';
+import { AuthenticationMethodComponent } from './components/authentication-method/authentication-method.component';
 import { LargeArticleComponent } from './components/large-article/large-article.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { AnonymousBoxComponent } from './components/anonymous-box/anonymous-box.component';
+import { AnonymousItemComponent } from './components/anonymous-item/anonymous-item.component';
 
 
 
@@ -21,7 +23,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     ForgotPasswordComponent,
     AuthenticationMethodComponent,
     LargeArticleComponent,
-    NavbarComponent
+    NavbarComponent,
+    AnonymousBoxComponent,
+    AnonymousItemComponent
   ],
   imports: [
     BrowserModule,
