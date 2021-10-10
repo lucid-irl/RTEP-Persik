@@ -1,0 +1,22 @@
+<div class="anonymous-page-container">
+
+  <div class="anonymous-content">
+    <div class="anonymous-article">
+      <app-anonymous-article *ngFor="let anonymous-article of anony_list">
+      </app-anonymous-article>
+
+    </div>
+    <div class="wrapper-comment">
+      <div class="thread">
+        <p>Người truonng muôn nghề</p>
+      </div>
+      <div class="anonymous-comment">
+        <app-anonymous-comment *ngFor="let anonymous-comment of anony_list">
+        </app-anonymous-comment>
+      </div>
+      <div class="input">
+        <input type="text">
+      </div>
+    </div>
+  </div>
+</div>
