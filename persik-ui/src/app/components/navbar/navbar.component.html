@@ -26,13 +26,9 @@
       </div>
       <div class="notification-container">
         <button (click)="activeNotification()">🔔</button>
-        <ul class="notification" [class]="notificationActive">
-          <li>Thông báo các kiểu </li>
-          <li>Thông báo các kiểu </li>
-          <li>Thông báo các kiểu </li>
-          <li>Thông báo các kiểu </li>
-          <li>Thông báo các kiểu </li>
-        </ul>
+        <div class="notification" [class]="notificationActive">
+          <app-notification-item *ngFor="let notification of notifications" [avatarUrl]="notification.avatarUrl" [notificationContent]="notification.notificationContent" [publicDate]="notification.publicDate"></app-notification-item>
+        </div>
       </div>
       <div class="avatar">
         <div class="image-container">
@@ -42,8 +38,8 @@
       <div class="write">
         <a href="" class="write-title">Write</a>
         <ul class="write-option">
-          <li>Write a blog</li>
-          <li>Write a poll</li>
+          <li><span>📃</span> A Post</li>
+          <li><span>📊</span> A Poll</li>
         </ul>
       </div>
     </div>
