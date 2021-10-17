@@ -19,6 +19,10 @@ import { QuillModule } from 'ngx-quill';
 import { AnonymousArticleComponent } from './components/anonymous-article/anonymous-article.component';
 import { AnonymousPageComponent } from './components/anonymous-page/anonymous-page.component';
 import { AnonymousCommentComponent } from './components/anonymous-comment/anonymous-comment.component';
+import { PollComponent } from './components/poll/poll.component';
+import { PollVoteComponent } from './components/poll-vote/poll-vote.component';
+import { PollArticleComponent } from './components/poll-article/poll-article.component';
+
 
 
 
@@ -38,7 +42,11 @@ import { AnonymousCommentComponent } from './components/anonymous-comment/anonym
     PostEditorComponent,
     AnonymousArticleComponent,
     AnonymousPageComponent,
-    AnonymousCommentComponent
+    AnonymousCommentComponent,
+    PollComponent,
+    PollVoteComponent,
+    PollArticleComponent,
+  
   ],
   imports: [
     BrowserModule,
