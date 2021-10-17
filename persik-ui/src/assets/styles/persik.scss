@@ -7,6 +7,7 @@ $persik-navigation-hover-background-color: #f5f6f7;
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+
 // Main theme
 $persik-second-font-family: "Noto Sans", sans-serif;
 $persik-second-font-color: #b5b5b5;
@@ -33,3 +34,34 @@ $persik-unactive-vote-color: #ecf0f1;
 $persik-active-vote-color: #2ecc71;
 
 $persik-extension-container-font-family: "Noto Sans", sans-serif;
+
+// cute button
+// Dưới đây là style cho cái button nhỏ nhỏ xinh xinh
+// bao gồm 1 số và 1 icon nào đó
+// chúng thường nằm trong bài viết, comment hoặc đâu đó
+.cute-button {
+  font-size: 13px;
+  border: 1px solid white;
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 15px;
+  transition: all 0.5;
+  box-sizing: border-box;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  flex-direction: row;
+  transition: all 0.3s;
+  &:hover {
+    background-color: #e7e7e9;
+    border: 1px solid rgb(177, 177, 177);
+  }
+  &:active {
+    background-color: #facecee5;
+  }
+  .cute-icon {
+  }
+  .cute-amount {
+    margin-right: 5px;
+  }
+}
