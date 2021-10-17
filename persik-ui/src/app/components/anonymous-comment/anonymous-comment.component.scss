@@ -42,10 +42,20 @@ $persik-extension-container-font-family: "Noto Sans", sans-serif;
     margin-bottom: 5px;
   }
   .extensions {
+    position: relative;
     color: #b5b5b5;
     font-family: $persik-extension-container-font-family;
     display: flex;
     justify-content: flex-end;
     gap: 5px;
+    .upvote-active {
+      background-color: #2ecc71;
+      color: white;
+    }
+
+    .downvote-active {
+      background-color: #e74c3c;
+      color: white;
+    }
   }
 }

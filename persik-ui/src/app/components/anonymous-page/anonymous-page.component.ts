@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AnonymousArticle } from 'src/app/models/AnonymousArticle';
 import { Comment } from '../../models/Comment';
 
 
@@ -9,7 +10,68 @@ import { Comment } from '../../models/Comment';
 })
 export class AnonymousPageComponent implements OnInit {
 
-  public anony_list = [1, 2, 3, 4, 5, 6, 7];
+  public anonymousArticles: AnonymousArticle[] = [
+    {
+      id: 0,
+      title: 'Người trong kẹt',
+      content: 'lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet',
+      view: 0,
+      upvote: 0,
+      downvote: 0,
+      publicDate: '15/11/2015',
+      modifyDate: '15/11/2015',
+      thumbnailImage: 'lorem ipsum dolor sit amet',
+      isApproved: true,
+      isAnonymous: true,
+      tag: "tâm sự",
+      commentAmount: 10
+    },
+    {
+      id: 1,
+      title: 'Không hiểu người trong cuộc',
+      content: 'lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet',
+      view: 0,
+      upvote: 0,
+      downvote: 0,
+      publicDate: '15/11/2015',
+      modifyDate: '15/11/2015',
+      thumbnailImage: 'lorem ipsum dolor sit amet',
+      isApproved: true,
+      isAnonymous: true,
+      tag: "tâm sự",
+      commentAmount: 10
+    },
+    {
+      id: 2,
+      title: 'Nghệ sĩ sao kê',
+      content: 'lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet',
+      view: 0,
+      upvote: 0,
+      downvote: 0,
+      publicDate: '15/11/2015',
+      modifyDate: '15/11/2015',
+      thumbnailImage: 'lorem ipsum dolor sit amet',
+      isApproved: true,
+      isAnonymous: true,
+      tag: "tâm sự",
+      commentAmount: 10
+    },
+    {
+      id: 3,
+      title: 'Ông hoàng ăn chặn',
+      content: 'lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet',
+      view: 0,
+      upvote: 0,
+      downvote: 0,
+      publicDate: '15/11/2015',
+      modifyDate: '15/11/2015',
+      thumbnailImage: 'lorem ipsum dolor sit amet',
+      isApproved: true,
+      isAnonymous: true,
+      tag: "tâm sự",
+      commentAmount: 10
+    },
+  ]
 
   public comments: Comment[] = [
     {

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { AnonymousArticle } from 'src/app/models/AnonymousArticle';
+import { Article } from 'src/app/models/Article';
 
 @Component({
   selector: 'app-anonymous-article',
@@ -7,9 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AnonymousArticleComponent implements OnInit {
 
+  @Input() anonymousArticle!: AnonymousArticle;
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }

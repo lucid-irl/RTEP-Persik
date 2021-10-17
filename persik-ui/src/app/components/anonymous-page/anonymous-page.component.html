@@ -2,7 +2,8 @@
 
   <div class="anonymous-content">
     <div class="anonymous-article">
-      <app-anonymous-article *ngFor="let anonymous-article of anony_list">
+      <app-anonymous-article *ngFor="let anonymousArticle of anonymousArticles"
+      [anonymousArticle]="anonymousArticle">
       </app-anonymous-article>
 
     </div>
@@ -29,13 +30,14 @@
       </div>
       <div class="comment-container">
         <div class="reply-to" [class.reply-active]="isReplyActive">
-          <span>Trả lời 💬 </span>
-          <span>#{{repliedCommentId}}</span>
+          <span>Trả lời </span>
+          <span>#{{repliedCommentId}} 💬</span>
+
         </div>
         <div class="reply">
           <input class="textbox" type="text" placeholder="Nhập một bình luận..." wrap="true">
-          <button>
-            <span>🪁</span>
+          <button title="Bình luận">
+            <span>🍑</span>
           </button>
         </div>
       </div>

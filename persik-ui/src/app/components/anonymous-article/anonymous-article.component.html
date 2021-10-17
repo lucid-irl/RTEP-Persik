@@ -2,25 +2,21 @@
   <div class="main-content">
     <div class="tag-container">
       <div class="tag">
-        <span>TÂM SỰ</span>
+        <span>{{anonymousArticle.tag | uppercase}}</span>
         <span class="separator">|</span>
-        <span class="public-date">15/11/2000</span>
+        <span class="public-date">{{anonymousArticle.publicDate}}</span>
       </div>
     </div>
     <div class="title-container">
-      <span class="title">Người trong muôn nghề</span>
+      <span class="title">{{anonymousArticle.title}}</span>
     </div>
     <div class="short-content">
-      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni cum alias cupiditate nulla quis qui vel
-        sunt,
-        debitis quam ipsa officia explicabo, culpa minima non deserunt, exercitationem numquam reprehenderit
-        quod?
-      </p>
+      <p>{{anonymousArticle.content}}</p>
     </div>
     <div class="extension-function">
       <div class="extension-container">
         <div class="cute-button">
-          <span class="cute-amount">10000000</span>
+          <span class="cute-amount">{{anonymousArticle.commentAmount}}</span>
           <span class="cute-icon">📝</span>
         </div>
       </div>

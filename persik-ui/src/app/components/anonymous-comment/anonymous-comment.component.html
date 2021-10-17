@@ -12,14 +12,14 @@
         <div class="cute-amount">Trả lời</div>
       </div>
     </div>
-    <div class="upvote">
-      <div class="cute-button">
+    <div class="upvote" (click)="upvote()" >
+      <div class="cute-button" [class.upvote-active]="isUpVoteActive">
         <div class="cute-amount">{{comment.upvote}}</div>
         <div class="cute-icon">👍</div>
       </div>
     </div>
-    <div class="downvote">
-      <div class="cute-button">
+    <div class="downvote" (click)="downvote()" >
+      <div class="cute-button" [class.downvote-active]="isDownVoteActive">
         <div class="cute-amount">{{comment.downvote}}</div>
         <div class="cute-icon">👎</div>
       </div>
