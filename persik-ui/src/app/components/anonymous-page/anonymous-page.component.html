@@ -14,8 +14,15 @@
         <app-anonymous-comment *ngFor="let anonymous-comment of anony_list">
         </app-anonymous-comment>
       </div>
-      <div class="input">
-        <input type="text">
+      <div class="comment-container">
+        <div class="reply-to">
+          <span>Đang trả lời bình luận</span>
+          <span>thứ 2</span>
+        </div>
+        <div class="reply">
+          <input class="textbox" type="text" placeholder="Nhập một bình luận..." wrap="true">
+          <button>🪁Gửi</button>
+        </div>
       </div>
     </div>
   </div>
