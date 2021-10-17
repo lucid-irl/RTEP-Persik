@@ -9,12 +9,13 @@ import { PostEditorComponent } from './components/post-editor/post-editor.compon
 import { AnonymousPageComponent } from './components/anonymous-page/anonymous-page.component';
 
 const routes: Routes = [
+  {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'home', component: LargeArticleComponent},
   {path: 'login', component: LoginComponent},
   {path: 'sign-up', component: SignUpComponent},
   {path: 'forgot-password', component: ForgotPasswordComponent},
   {path: 'authentication-method', component: AuthenticationMethodComponent},
-  {path: 'write-post', component: PostEditorComponent}
+  {path: 'write-post', component: PostEditorComponent},
   {path: 'anonymous', component: AnonymousPageComponent},
 ];
 
