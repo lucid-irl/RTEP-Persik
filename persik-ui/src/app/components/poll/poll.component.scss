@@ -1,0 +1,39 @@
+$persik-button-color: #f8c3bd;
+$persik-background: #fbe7e8;
+
+$persik-title-font-family: "Noto Sans", sans-serif;
+$persik-title-font-size: 25px;
+
+.poll {
+  background-color: $persik-background;
+  max-width: auto;
+  height: 800px;
+  border-radius: 4px;
+  height: auto;
+  border: 1px solid $persik-button-color;
+  padding: 5px;
+  .poll-contant{
+    .poll-content{  
+      background-color: white;
+      padding: 20px;
+      border-radius: 4px;
+      margin-top: 5px;
+      margin-left: 100px;
+      height: 80vh;
+      overflow: auto;
+    }
+    .poll-vote-containt {
+      $persik-tag-font-family: "Noto Sans", sans-serif;
+      $persik-tag-font-size: 17px;
+        background-color: white;
+        display: block;
+        position: absolute;
+        top: 120px;
+        right: 100px;
+        width: 400px;
+        height: 500px;
+        border: 3px solid #9ba38f;
+      }
+   
+  }
+}

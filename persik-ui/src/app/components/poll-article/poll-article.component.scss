@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+$persik-tag-font-family: "Noto Sans", sans-serif;
+$persik-tag-font-size: 17px;
+
+$persik-unactive-vote-color: #ecf0f1;
+$persik-active-vote-color: #2ecc71;
+
+$persik-extension-container-font-family: "Noto Sans", sans-serif;
+
+.poll-contain {
+    background-color: white;
+    width: 650px;
+    padding: 20px;
+    border-radius: 4px;
+    flex-flow: column;
+    margin-top: 5px;
+    margin-left: 100px;
+    .poll-content{
+    &:hover {
+      background-color: #f4f4f7;
+    }
+  
+    .poll-tittle-menu {
+      .menu {
+        font-family: $persik-tag-font-family;
+        font-size: $persik-tag-font-size;
+        border-radius: 4px;
+        padding: 10px 10px;
+  
+        li {
+          list-style: none;
+  
+          .poll-title { 
+            font-family: $persik-tag-font-family;
+            font-size: $persik-tag-font-size;
+            font-weight: bold;
+            margin-left: 20px;
+          }
+          .menu-icon {
+            font-family: $persik-tag-font-family;
+            font-size: $persik-tag-font-size;
+            position: absolute;
+            margin-top: -20px;
+            margin-left: 600px;
+  
+            &:hover {
+              background-color : white;
+            }
+  
+            &:hover > .menu-option {
+              display: inline;
+            }
+          }
+          &:hover > .menu-option {
+            display: inline;
+          }
+          .menu-option {
+            background-color: white;
+            display: none;
+            position: absolute;
+          //  margin-top: -10px;
+            width: 100px;
+           // padding: 15px;
+            margin-left: 580px;
+  
+            li {
+              display: block;
+            }
+            li {
+              &:hover {
+                background-color: #9ba38f;
+              }
+            }
+          }
+        }
+      }
+    }
+    .content {
+      
+      margin-left: 20px;
+        P {
+          font-family: $persik-tag-font-family;
+          font-size: $persik-tag-font-size;
+        }
+      li{
+        list-style: none;
+  
+        &:active > .poll-vote-containt{
+          top: 20px;
+          display: block;
+        }
+      }  
+    }
+  }
+}

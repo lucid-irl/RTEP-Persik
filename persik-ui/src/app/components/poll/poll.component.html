@@ -1,0 +1,13 @@
+<div class="poll">
+  <div class="poll_contant">
+    <div class="poll-content" (click)="onClick()" >
+        <div class="poll-article"  >
+          <app-poll-article *ngFor="let poll-article of anony_list">
+          </app-poll-article>  
+        </div>
+    </div>
+    <div class="poll-vote-containt ">
+        <app-poll-vote *ngIf="isActive"> </app-poll-vote>
+    </div>
+  </div>
+</div>
