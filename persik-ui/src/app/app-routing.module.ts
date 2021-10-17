@@ -9,6 +9,7 @@ import { PostEditorComponent } from './components/post-editor/post-editor.compon
 import { AnonymousPageComponent } from './components/anonymous-page/anonymous-page.component';
 import { PollComponent } from './components/poll/poll.component';
 const routes: Routes = [
+  {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'home', component: LargeArticleComponent},
   {path: 'login', component: LoginComponent},
   {path: 'sign-up', component: SignUpComponent},

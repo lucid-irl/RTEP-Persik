@@ -1,13 +1,15 @@
+@import '../../../assets/styles/persik.scss';
 $persik-button-color: #f8c3bd;
 $persik-background: #fbe7e8;
 
 $persik-title-font-family: "Noto Sans", sans-serif;
 $persik-title-font-size: 25px;
 
+$persik-tag-font-family: "Noto Sans", sans-serif;
+$persik-tag-font-size: 12px;
+
 .anonymous-page-container {
   background-color: $persik-background;
-  max-width: auto;
-  height: 800px;
   border-radius: 4px;
   height: auto;
   border: 1px solid $persik-button-color;
@@ -17,21 +19,127 @@ $persik-title-font-size: 25px;
     display: flex;
     justify-content: center;
     gap: 10px;
-    .wrapper-comment {
-      .thread {
-        font-family: $persik-title-font-family;
-        font-size: $persik-title-font-size;
+    .anonymous-article {
+      height: 85vh;
+      overflow-y: auto;
+      border-radius: 4px;
+      &::-webkit-scrollbar {
+        width: 10px;
+        background-color: none;
+        border-radius: 10px;
       }
-      .anonymous-comment {
-        height: 80vh;
-        overflow-y: auto;
+      &::-webkit-scrollbar-track {
+        background-color: none;
       }
-      .input {
+      &::-webkit-scrollbar-thumb {
+        background-color: rgb(207, 207, 207);
+        border-radius: 10px
       }
     }
-    .anonymous-article {
-      height: 80vh;
-      overflow-y: auto;
+    .wrapper-comment {
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+      padding: 10px;
+      border-radius: 4px;
+      height: 85vh;
+      width: 25%;
+      justify-content: stretch;
+
+      .thread {
+        margin-bottom: 20px;
+        padding: 10px;
+        .tag-container {
+          color: $persik-second-font-color;
+          .tag {
+            font-family: $persik-tag-font-family;
+            font-size: $persik-tag-font-size;
+          }
+          .separator {
+            margin-left: 5px;
+            margin-right: 5px;
+          }
+        }
+        .info-container {
+          font-family: $persik-title-font-family;
+          font-size: $persik-title-font-size;
+        }
+      }
+      .anonymous-comment {
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        height:100%;
+        width: 100%;
+        &::-webkit-scrollbar {
+          width: 10px;
+          background-color: none;
+          border-radius: 10px;
+        }
+        &::-webkit-scrollbar-track {
+          background-color: none;
+        }
+        &::-webkit-scrollbar-thumb {
+          background-color: rgb(207, 207, 207);
+          border-radius: 10px
+        }
+        .app-anonymous-comment {
+          width: 100%;
+        }
+      }
+      .comment-container {
+        height: 70px;
+        padding-top: 10px;
+        display: flex;
+        flex-direction: column;
+        transition: all 0.4s;
+
+        .reply-to {
+          margin-bottom: 5px;
+          font-family: $persik-second-font-family;
+          font-size: 13px;
+          font-weight: bolder;
+          color: gray;
+          display: none;
+        }
+
+        .reply-active {
+          display: block;
+        }
+
+        .reply {
+          display: flex;
+          flex-direction: row;
+          background-color: rgb(241, 241, 241);
+          border-radius: 20px;
+          box-sizing: border-box;
+          align-items: center;
+          .textbox {
+            all: unset;
+            padding: 10px 10px;
+            display: block;
+            width: 100%;
+          }
+          button {
+            position: relative;
+            all: unset;
+            border-radius: 20px;
+            display: flex;
+            box-sizing: border-box;
+            width: 46px;
+            height: 40px;
+            align-items: center;
+            justify-content: center;
+            &:hover {
+              background-color: rgb(211, 211, 211);
+
+            }
+            span {
+              position: absolute;
+            }
+          }
+        }
+      }
     }
   }
 }

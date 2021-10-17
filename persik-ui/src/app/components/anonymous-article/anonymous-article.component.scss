@@ -1,23 +1,19 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import "../../../assets/styles/persik.scss";
 
+// anonymouse article
 $persik-tag-font-family: "Noto Sans", sans-serif;
-$persik-tag-font-size: 10px;
+$persik-tag-font-size: 12px;
 
 $persik-title-font-family: "Montserrat";
 $persik-title-font-size: 17px;
 
 $persik-short-content-font-family: "Noto Sans", sans-serif;
-$persik-short-content-font-size: 14px;
-
-
+$persik-short-content-font-size: 13px;
 
 $persik-public-date-font-family: "Noto Sans", sans-serif;
 $persik-public-date-font-size: 8px;
 
 $persik-vote-font-family: "Noto Sans", sans-serif;
-$persik-unactive-vote-color: #ecf0f1;
 $persik-active-vote-color: #2ecc71;
 
 $persik-extension-container-font-family: "Noto Sans", sans-serif;
@@ -30,26 +26,32 @@ $persik-extension-container-font-family: "Noto Sans", sans-serif;
   border-radius: 4px;
   flex-flow: column;
   margin-bottom: 5px;
-  &:hover{
-    background-color: #f4f4f7;
+  &:hover {
+    background-color: #fcfcfc;
   }
 
   .main-content {
     .tag-container {
+      color: $persik-second-font-color;
       .tag {
         font-family: $persik-tag-font-family;
         font-size: $persik-tag-font-size;
-        padding-bottom: 5px;
+      }
+      .separator {
+        margin-left: 5px;
+        margin-right: 5px;
       }
     }
     .title-container {
+      margin-bottom: 10px;
       .title {
         font-family: $persik-title-font-family;
         font-size: $persik-title-font-size;
-        font-weight: bold;
+        font-weight: bolder;
       }
     }
     .short-content {
+      margin-bottom: 10px;
       p {
         font-family: $persik-short-content-font-family;
         font-size: $persik-short-content-font-size;
@@ -63,9 +65,24 @@ $persik-extension-container-font-family: "Noto Sans", sans-serif;
         font-family: $persik-extension-container-font-family;
         font-size: 15px;
         justify-content: space-around;
-        gap: 10px;
         .comment {
+          font-size: 13px;
+          background-color: white;
+          padding: 5px 10px;
+          border-radius: 15px;
+          transition: all 0.5;
+          box-sizing: border-box;
+          cursor: pointer;
+          user-select: none;
+          &:hover {
+            background-color: #e7e7e9;
+          }
+          &:active {
+            background-color: #e7e7e9e5;
+          }
           .comment-icon {
+          }
+          .comment-amount {
             margin-right: 5px;
           }
         }

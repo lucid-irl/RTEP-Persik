@@ -1,23 +1,24 @@
+@import "../../../assets/styles/persik.scss";
+
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 
 $persik-short-content-font-family: "Noto Sans", sans-serif;
-$persik-short-content-font-size: 12px;
+$persik-short-content-font-size: 14px;
 
 $persik-writer-name-font-family: "Noto Sans", sans-serif;
 $persik-writer-name-font-size: 12px;
 
 $persik-public-date-font-family: "Noto Sans", sans-serif;
-$persik-public-date-font-size: 10px;
+$persik-public-date-font-size: 12px;
 
 $persik-extension-container-font-family: "Noto Sans", sans-serif;
 
 .anonymous-comment-wrapper {
   display: flex;
   background-color: white;
-  max-width: 400px;
   padding: 10px;
   border-radius: 4px;
   flex-flow: column;
@@ -26,12 +27,35 @@ $persik-extension-container-font-family: "Noto Sans", sans-serif;
   &:hover {
     background-color: #f4f4f7;
   }
+  .date{
+    color: #b5b5b5;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: $persik-public-date-font-family;
+    font-size: $persik-public-date-font-size;
+    margin-bottom: 5px;
+  }
   .comment {
     font-family: $persik-short-content-font-family;
     font-size: $persik-short-content-font-size;
+    margin-bottom: 5px;
   }
-  .date{
-    font-family: $persik-public-date-font-family;
-    font-size: $persik-public-date-font-size;
+  .extensions {
+    position: relative;
+    color: #b5b5b5;
+    font-family: $persik-extension-container-font-family;
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+    .upvote-active {
+      background-color: #2ecc71;
+      color: white;
+    }
+
+    .downvote-active {
+      background-color: #e74c3c;
+      color: white;
+    }
   }
 }
