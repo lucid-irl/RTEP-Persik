@@ -31,6 +31,7 @@ nav {
           background-color: $persik-navigation-hover-background-color;
         }
         .second-level-menu {
+          z-index: 999999;
           background-color: white;
           position: absolute;
           top: 55px;
@@ -59,7 +60,7 @@ nav {
     justify-content: flex-end;
     padding-right: 100px;
     button {
-       margin-left: 10px;
+      margin-left: 10px;
     }
     .notification-container {
       position: relative;
@@ -76,6 +77,28 @@ nav {
         box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048),
           0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
           0 100px 80px rgba(0, 0, 0, 0.12);
+        .notification-title {
+          font-family: "Montserrat", sans-serif;
+          font-size: 20px;
+          font-weight: bolder;
+          margin-bottom: 10px;
+        }
+        .notification-container {
+          overflow-y: auto;
+          height: 60vh;
+          &::-webkit-scrollbar {
+            width: 10px;
+            background-color: none;
+            border-radius: 10px;
+          }
+          &::-webkit-scrollbar-track {
+            background-color: none;
+          }
+          &::-webkit-scrollbar-thumb {
+            background-color: rgb(207, 207, 207);
+            border-radius: 10px
+          }
+        }
       }
       .active {
         display: inline;
@@ -110,7 +133,18 @@ nav {
         }
       }
       .write-option {
+        z-index: 9999;
         display: none;
+        position: absolute;
+        background-color: white;
+        width: 130px;
+        top: 50px;
+        left: -10px;
+        padding: 10px;
+        border-radius: 4px;
+        box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+          0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+          0 100px 80px rgba(0, 0, 0, 0.12);
         li {
           padding: 10px;
           display: block;
@@ -121,20 +155,9 @@ nav {
       }
       &:hover {
         background-color: #f4f4f7;
-        
       }
-      &:hover > .write-option{
+      &:hover > .write-option {
         display: inline;
-        position: absolute;
-        background-color: white;
-        width: 130px;
-        top: 60px;
-        left: -10px;
-        padding: 10px;
-        border-radius: 4px;
-        box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048),
-        0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-        0 100px 80px rgba(0, 0, 0, 0.12);
       }
     }
   }
