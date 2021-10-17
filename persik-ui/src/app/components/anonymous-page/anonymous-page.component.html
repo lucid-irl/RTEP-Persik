@@ -1,4 +1,4 @@
-<div class="anonymous-page-container">
+<div class="anonymous-page-container" >
 
   <div class="anonymous-content">
     <div class="anonymous-article">
@@ -8,20 +8,35 @@
     </div>
     <div class="wrapper-comment">
       <div class="thread">
-        <p>Người truonng muôn nghề</p>
+        <div class="tag-container">
+          <div class="tag">
+            <span>TÂM SỰ</span>
+            <span class="separator">|</span>
+            <span class="public-date">15/11/2000</span>
+          </div>
+        </div>
+        <div class="info-container">
+          <p>{{articleTitle}}</p>
+        </div>
       </div>
       <div class="anonymous-comment">
-        <app-anonymous-comment *ngFor="let anonymous-comment of anony_list">
+        <app-anonymous-comment *ngFor="let comment of comments"
+        class="app-anonymous-comment"
+          [comment]="comment"
+          (replyCommentEvent)='handleReplyCommentEvent($event)'
+        >
         </app-anonymous-comment>
       </div>
       <div class="comment-container">
-        <div class="reply-to">
-          <span>Đang trả lời bình luận</span>
-          <span>thứ 2</span>
+        <div class="reply-to" [class.reply-active]="isReplyActive">
+          <span>Trả lời 💬 </span>
+          <span>#{{repliedCommentId}}</span>
         </div>
         <div class="reply">
           <input class="textbox" type="text" placeholder="Nhập một bình luận..." wrap="true">
-          <button>🪁Gửi</button>
+          <button>
+            <span>🪁</span>
+          </button>
         </div>
       </div>
     </div>
