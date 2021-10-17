@@ -1,4 +1,7 @@
+@import '../../../assets/styles/persik.scss';
+
 .notification-item {
+  position: relative;
   display: flex;
   flex-direction: row;
   border-radius: 4px;
@@ -25,7 +28,32 @@
     }
   }
   .infomation-container {
+    .short-content {
+      span {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 15px;
+      }
+    }
+    .public-date {
+      span {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 13px;
+        color: $persik-second-font-color;
+      }
+    }
   }
   .extension {
+    .option-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      &:hover {
+        border-radius: 50%;
+        background-color: #e7e7e9;
+        border: 1px solid #cfcfcf;
+      }
+    }
   }
 }
