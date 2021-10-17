@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Comment } from '../../models/Comment';
 
 @Component({
   selector: 'app-anonymous-comment',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AnonymousCommentComponent implements OnInit {
 
+  @Input() comment!: Comment;
+
+  @Output() replyCommentEvent = new EventEmitter<Comment>();
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  public replyComment():void {
+    this.replyCommentEvent.emit(this.comment);
+  }
+  
 }
