@@ -7,6 +7,10 @@ $persik-navigation-hover-background-color: #f5f6f7;
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+// Main theme
+$persik-second-font-family: "Noto Sans", sans-serif;
+$persik-second-font-color: #b5b5b5;
+// main theme
 $persik-tag-font-family: "Noto Sans", sans-serif;
 $persik-tag-font-size: 16px;
 
@@ -23,6 +27,8 @@ $persik-public-date-font-family: "Noto Sans", sans-serif;
 $persik-public-date-font-size: 10px;
 
 $persik-vote-font-family: "Noto Sans", sans-serif;
+
+// Vote color
 $persik-unactive-vote-color: #ecf0f1;
 $persik-active-vote-color: #2ecc71;
 
