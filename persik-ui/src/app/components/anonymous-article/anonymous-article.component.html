@@ -21,7 +21,7 @@
     </div>
     <div class="extension-function">
       <div class="extension-container">
-        <div class="upvote" (click)="upvote()">
+        <div class="upvote" (click)="upvote()" title="Tui thích bài này">
           <div class="cute-button">
             <span class="cute-amount">{{anonymousArticle.upvote}}</span>
             <span class="cute-icon" *ngIf="isUpVoteActive; else upVoteActiveNone">💖</span>
@@ -31,7 +31,7 @@
           </div>
         </div>
 
-        <div class="downvote" (click)="downvote()">
+        <div class="downvote" (click)="downvote()" title="Tui không thích bài này">
           <div class="cute-button">
             <span class="cute-amount">{{anonymousArticle.downvote}}</span>
             <span class="cute-icon" *ngIf="isDownVoteActive; else downvoteActiveNone">😭</span>
@@ -40,7 +40,7 @@
             </ng-template>
           </div>
         </div>
-        <div class="show-comment" (click)="showComments()">
+        <div class="show-comment" (click)="showComments()" title="Click để hiển thị bình luận">
           <div class="cute-button">
             <span class="cute-amount">{{anonymousArticle.commentAmount}}</span>
             <span class="cute-icon">📝</span>
