@@ -11,5 +11,6 @@ export interface Article {
   isApproved: boolean;
   isAnonymous: boolean;
   username: string;
-  tag: number;
+  tag: string;
+  commentAmount: number;
 }
