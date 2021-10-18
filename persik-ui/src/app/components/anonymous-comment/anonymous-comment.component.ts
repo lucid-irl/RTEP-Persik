@@ -1,11 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { VoteStatus } from 'src/app/enums/VoteStatus';
 import { Comment } from '../../models/Comment';
-
-enum VoteStatus {
-  Upvote,
-  Downvote,
-  None,
-}
 
 @Component({
   selector: 'app-anonymous-comment',
