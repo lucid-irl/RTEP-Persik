@@ -55,6 +55,16 @@ $persik-extension-container-font-family: "Noto Sans", sans-serif;
       p {
         font-family: $persik-short-content-font-family;
         font-size: $persik-short-content-font-size;
+        .change-show-status {
+          color: gray;
+          font-weight: bolder;
+          cursor: pointer;
+          transition: all 0.3s;
+          &:hover {
+            text-decoration: underline;
+            text-decoration-thickness: 2px;
+          }
+        }
       }
     }
     .extension-function {

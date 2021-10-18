@@ -11,16 +11,42 @@
       <span class="title">{{anonymousArticle.title}}</span>
     </div>
     <div class="short-content">
-      <p>{{anonymousArticle.content}}</p>
+      <div *ngIf="isShortContent; then thenBlock else elseBlock"></div>
+      <ng-template #thenBlock>
+        <p>{{shortContent}} <span class="change-show-status" (click)="showFullContent()">Xem thêm</span></p>
+      </ng-template>
+      <ng-template #elseBlock>
+        <p>{{anonymousArticle.content}} <span class="change-show-status" (click)="showShortContent()">Ẩn bớt</span></p>
+      </ng-template>
     </div>
     <div class="extension-function">
       <div class="extension-container">
-        <div class="cute-button">
-          <span class="cute-amount">{{anonymousArticle.commentAmount}}</span>
-          <span class="cute-icon">📝</span>
+        <div class="upvote" (click)="upvote()">
+          <div class="cute-button">
+            <span class="cute-amount">{{anonymousArticle.upvote}}</span>
+            <span class="cute-icon" *ngIf="isUpVoteActive; else upVoteActiveNone">💖</span>
+            <ng-template #upVoteActiveNone>
+              <span class="cute-icon">🤍</span>
+            </ng-template>
+          </div>
+        </div>
+
+        <div class="downvote" (click)="downvote()">
+          <div class="cute-button">
+            <span class="cute-amount">{{anonymousArticle.downvote}}</span>
+            <span class="cute-icon" *ngIf="isDownVoteActive; else downvoteActiveNone">😭</span>
+            <ng-template #downvoteActiveNone>
+              <span class="cute-icon">😟</span>
+            </ng-template>
+          </div>
+        </div>
+        <div class="show-comment" (click)="showComments()">
+          <div class="cute-button">
+            <span class="cute-amount">{{anonymousArticle.commentAmount}}</span>
+            <span class="cute-icon">📝</span>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-
