@@ -10,6 +10,7 @@
     <div class="title-container">
       <span class="title">{{anonymousArticle.title}}</span>
     </div>
+
     <div class="short-content">
       <div *ngIf="isShortContent; then thenBlock else elseBlock"></div>
       <ng-template #thenBlock>
@@ -19,6 +20,7 @@
         <p>{{anonymousArticle.content}} <span class="change-show-status" (click)="showShortContent()">Ẩn bớt</span></p>
       </ng-template>
     </div>
+
     <div class="extension-function">
       <div class="extension-container">
         <div class="upvote" (click)="upvote()">
