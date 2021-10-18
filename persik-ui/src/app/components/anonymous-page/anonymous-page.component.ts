@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AnonymousArticle } from 'src/app/models/AnonymousArticle';
+import { Article } from 'src/app/models/Article';
 import { Comment } from '../../models/Comment';
 
 
@@ -14,7 +15,7 @@ export class AnonymousPageComponent implements OnInit {
     {
       id: 0,
       title: 'Người trong kẹt',
-      content: 'lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet',
+      content: 'lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet',
       view: 0,
       upvote: 0,
       downvote: 0,
@@ -151,5 +152,9 @@ export class AnonymousPageComponent implements OnInit {
   public handleReplyCommentEvent(comment: Comment): void {
     this.isReplyActive = true;
     this.repliedCommentId = comment.id;
+  }
+
+  public showCommentsHandler(anonymousArticle: AnonymousArticle): void {
+    this.articleTitle = anonymousArticle.title;
   }
 }
