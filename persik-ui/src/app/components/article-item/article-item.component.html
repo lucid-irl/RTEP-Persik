@@ -1,0 +1,73 @@
+<div class="article-container">
+  <div class="image-container">
+    <img src="../../../assets/images/Untitled.png" alt="">
+  </div>
+  <div class="article-infomation-container">
+    <div class="article-infomation">
+      <div class="tag-container">
+        <span>{{Article.tag | uppercase}}</span>
+        <span>|</span>
+        <!--  -->
+      </div>
+      <div class="title-container">
+        <span class="title">{{Article.title}}</span>
+      </div>
+      <div class="short-content-container">
+        <div *ngIf="isShortContent; then thenBlock else elseBlock"></div>
+        <ng-template #thenBlock>
+          <p>{{shortContent}} <span class="change-show-status" (click)="showFullContent()">Xem thêm</span></p>
+        </ng-template>
+        <ng-template #elseBlock>
+          <p>{{Article.content}} <span class="change-show-status" (click)="showShortContent()">Ẩn bớt</span>
+          </p>
+        </ng-template>
+      </div>
+    </div>
+    <div class="extension-function">
+      <div class="avatar">
+        <div class="image-avatar">
+          <a [href]="">
+            <img src="../../../assets/images/megumin.jpg" alt="">
+          </a>
+        </div>
+        <div class="writer-info">
+          <span class="username">{{Article.username}}</span>
+          <span class="public-date">{{Article.publicDate}}</span>
+        </div>
+      </div>
+      <div class="extension-container">
+        <div class="vote">
+          <div class="upvote" (click)="upvote()">
+            <div class="cute-button">
+              <span class="cute-amount">{{Article.upvote}}</span>
+              <span class="cute-icon" *ngIf="isUpVoteActive; else upVoteActiveNone">💖</span>
+              <ng-template #upVoteActiveNone>
+                <span class="cute-icon">🤍</span>
+              </ng-template>
+            </div>
+          </div>
+
+          <div class="downvote" (click)="downvote()">
+            <div class="cute-button">
+              <span class="cute-amount">{{Article.downvote}}</span>
+              <span class="cute-icon" *ngIf="isDownVoteActive; else downvoteActiveNone">😭</span>
+              <ng-template #downvoteActiveNone>
+                <span class="cute-icon">😟</span>
+              </ng-template>
+            </div>
+          </div>
+
+        </div>
+        <div class="view">
+          <span class="view-icon">👀</span>
+          <span class="view-amount">400</span>
+        </div>
+        <div class="comment">
+          <span class="comment-icon">📝</span>
+          <span class="comment-amount">1000</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

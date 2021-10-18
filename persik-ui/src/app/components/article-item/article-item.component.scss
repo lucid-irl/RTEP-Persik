@@ -1,0 +1,138 @@
+@import "../../../assets/styles/persik.scss";
+
+.article-container {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  border-radius: 4px;
+  max-width: 750px;
+  height: 250px;
+  padding: 10px;
+  gap: 10px;
+  margin-bottom: 10px;
+
+
+  .image-container {
+    flex-grow: 1;
+    width: 17rem;
+    height: 100%;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+  }
+  .article-infomation-container {
+    flex-grow: 3;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    //align-content: space-between;
+    justify-content: space-between;
+    .article-infomation {
+      .tag-container {
+        margin-bottom: 10px;
+        span {
+          font-family: "Noto sans", sans-serif;
+          font-weight: lighter;
+        }
+      }
+      .title-container {
+        padding-bottom: 10px;
+        span {
+          font-family: "Montserrat", sans-serif;
+          font-weight: bold;
+          font-size: 25px;
+        }
+      }
+      .short-content-container {
+        margin-bottom: 10px;
+        span {
+          font-family: "Noto Sans", sans-serif;
+          font-size: 15px;
+          color: #b5b5b5;
+        }
+      }
+    }
+    .extension-function {
+      align-items: center;
+      display: flex;
+
+      justify-content: flex-end;
+      .avatar {
+        display: flex;
+        flex-grow: 2;
+        .image-avatar {
+          margin-right: 10px;
+          img {
+            -webkit-user-select: none; /* Safari */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* IE10+/Edge */
+            user-select: none; /* Standard */
+            cursor: pointer;
+            display: block;
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+          }
+        }
+        .writer-info {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          .name {
+            cursor: pointer;
+            font-family: $persik-writer-name-font-family;
+            font-size: 14px;
+            margin-bottom: 4px;
+          }
+          .public-date {
+            color: #b5b5b5;
+            font-family: "Roboto";
+            font-size: 10px;
+          }
+        }
+      }
+      .extension-container {
+        flex-grow: 2;
+        display: flex;
+        font-family: $persik-extension-container-font-family;
+        font-size: 15px;
+        gap: 10px;
+        .vote {
+          display: flex;
+          cursor: pointer;
+          -webkit-user-select: none; /* Safari */
+          -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* IE10+/Edge */
+          user-select: none; /* Standard */
+          .upvote {
+            margin-right: 5px;
+            color: $persik-unactive-vote-color;
+          }
+          .downvote {
+            margin-right: 5px;
+            color: $persik-unactive-vote-color;
+          }
+          .active {
+            color: $persik-active-vote-color;
+          }
+        }
+        .view {
+          .view-icon {
+            margin-right: 5px;
+          }
+        }
+        .comment {
+          .comment-icon {
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+
+  }
+}
