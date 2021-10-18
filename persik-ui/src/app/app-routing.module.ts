@@ -8,6 +8,7 @@ import { LargeArticleComponent } from './components/large-article/large-article.
 import { PostEditorComponent } from './components/post-editor/post-editor.component';
 import { AnonymousPageComponent } from './components/anonymous-page/anonymous-page.component';
 import { PollComponent } from './components/poll/poll.component';
+import { TagPageComponent } from './components/tag-page/tag-page.component';
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'home', component: LargeArticleComponent},
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path: 'write-post', component: PostEditorComponent},
   {path: 'anonymous', component: AnonymousPageComponent},
   {path: 'poll', component: PollComponent},
+  {path: 'tag', component: TagPageComponent},
 ]
 
 @NgModule({
