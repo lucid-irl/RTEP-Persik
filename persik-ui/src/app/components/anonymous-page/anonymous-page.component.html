@@ -3,7 +3,8 @@
   <div class="anonymous-content">
     <div class="anonymous-article">
       <app-anonymous-article *ngFor="let anonymousArticle of anonymousArticles"
-      [anonymousArticle]="anonymousArticle">
+      [anonymousArticle]="anonymousArticle"
+      (showCommentsEvent)="showCommentsHandler($event)">
       </app-anonymous-article>
 
     </div>
@@ -31,8 +32,8 @@
       <div class="comment-container">
         <div class="reply-to" [class.reply-active]="isReplyActive">
           <span>Trả lời </span>
-          <span>#{{repliedCommentId}} 💬</span>
-
+          <span>#{{repliedCommentId}} 💬 · </span>
+          <span class="cancel">  Huỷ</span>
         </div>
         <div class="reply">
           <input class="textbox" type="text" placeholder="Nhập một bình luận..." wrap="true">

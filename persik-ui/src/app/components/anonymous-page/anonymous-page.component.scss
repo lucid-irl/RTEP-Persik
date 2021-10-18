@@ -47,7 +47,7 @@ $persik-tag-font-size: 12px;
       justify-content: stretch;
 
       .thread {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         padding: 10px;
         .tag-container {
           color: $persik-second-font-color;
@@ -95,12 +95,21 @@ $persik-tag-font-size: 12px;
         transition: all 0.4s;
 
         .reply-to {
+          padding: 0 10px;
           margin-bottom: 5px;
           font-family: $persik-second-font-family;
           font-size: 13px;
           font-weight: bolder;
           color: gray;
           display: none;
+          .cancel {
+            cursor: pointer;
+            &:hover {
+              text-decoration: underline;
+              text-underline-offset: 2px;
+              text-decoration-thickness: 3px;
+            }
+          }
         }
 
         .reply-active {
