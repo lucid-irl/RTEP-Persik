@@ -22,6 +22,7 @@ import { AnonymousCommentComponent } from './components/anonymous-comment/anonym
 import { PollComponent } from './components/poll/poll.component';
 import { PollVoteComponent } from './components/poll-vote/poll-vote.component';
 import { PollArticleComponent } from './components/poll-article/poll-article.component';
+import { AnonymousNavigationBarComponent } from './components/anonymous-navigation-bar/anonymous-navigation-bar.component';
 
 
 
@@ -46,6 +47,7 @@ import { PollArticleComponent } from './components/poll-article/poll-article.com
     PollComponent,
     PollVoteComponent,
     PollArticleComponent,
+    AnonymousNavigationBarComponent,
   
   ],
   imports: [
