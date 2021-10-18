@@ -1,0 +1,19 @@
+@import '../../../assets/styles/persik.scss';
+$persik-button-color: #f8c3bd;
+$persik-background: #fbe7e8;
+
+$persik-title-font-family: "Noto Sans", sans-serif;
+$persik-title-font-size: 18px;
+
+$persik-tag-font-family: "Noto Sans", sans-serif;
+$persik-tag-font-size: 12px;
+
+.tag-page-container{
+  background-color: $persik-background;
+  border-radius: 4px;
+  height: auto;
+  border: 1px solid $persik-button-color;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+}
