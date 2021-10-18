@@ -1,12 +1,12 @@
-<div class="anonymous-page-container" >
-
+<div class="anonymous-page-container">
+  <div class="navigation-bar">
+    <app-anonymous-navigation-bar></app-anonymous-navigation-bar>
+  </div>
   <div class="anonymous-content">
     <div class="anonymous-article">
-      <app-anonymous-article *ngFor="let anonymousArticle of anonymousArticles"
-      [anonymousArticle]="anonymousArticle"
-      (showCommentsEvent)="showCommentsHandler($event)">
+      <app-anonymous-article *ngFor="let anonymousArticle of anonymousArticles" [anonymousArticle]="anonymousArticle"
+        (showCommentsEvent)="showCommentsHandler($event)">
       </app-anonymous-article>
-
     </div>
     <div class="wrapper-comment">
       <div class="thread">
@@ -22,18 +22,15 @@
         </div>
       </div>
       <div class="anonymous-comment">
-        <app-anonymous-comment *ngFor="let comment of comments"
-        class="app-anonymous-comment"
-          [comment]="comment"
-          (replyCommentEvent)='handleReplyCommentEvent($event)'
-        >
+        <app-anonymous-comment *ngFor="let comment of comments" class="app-anonymous-comment" [comment]="comment"
+          (replyCommentEvent)='handleReplyCommentEvent($event)'>
         </app-anonymous-comment>
       </div>
       <div class="comment-container">
         <div class="reply-to" [class.reply-active]="isReplyActive">
           <span>Trả lời </span>
           <span>#{{repliedCommentId}} 💬 · </span>
-          <span class="cancel">  Huỷ</span>
+          <span class="cancel" (click)="cancelReply()">Huỷ</span>
         </div>
         <div class="reply">
           <input class="textbox" type="text" placeholder="Nhập một bình luận..." wrap="true">

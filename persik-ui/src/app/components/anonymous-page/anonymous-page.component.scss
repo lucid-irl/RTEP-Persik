@@ -9,20 +9,28 @@ $persik-tag-font-family: "Noto Sans", sans-serif;
 $persik-tag-font-size: 12px;
 
 .anonymous-page-container {
+  display: flex;
   background-color: $persik-background;
   border-radius: 4px;
   height: auto;
   border: 1px solid $persik-button-color;
   padding: 5px;
+  column-gap: 10px;
+  .navigation-bar {
+    flex-grow:1;
+  }
   .anonymous-content {
+    border-radius: 4px;
+    flex-grow: 2;
+    background-color:white;
     position: relative;
     display: flex;
     justify-content: center;
-    gap: 10px;
+    padding: 10px;
     .anonymous-article {
+      width: 850px;
       height: 85vh;
       overflow-y: auto;
-      border-radius: 4px;
       &::-webkit-scrollbar {
         width: 10px;
         background-color: none;
@@ -37,11 +45,12 @@ $persik-tag-font-size: 12px;
       }
     }
     .wrapper-comment {
+      border-left: 1px solid gray;
+      flex-grow: 1;
       display: flex;
       flex-direction: column;
       background-color: white;
       padding: 10px;
-      border-radius: 4px;
       height: 85vh;
       width: 25%;
       justify-content: stretch;
