@@ -157,4 +157,9 @@ export class AnonymousPageComponent implements OnInit {
   public showCommentsHandler(anonymousArticle: AnonymousArticle): void {
     this.articleTitle = anonymousArticle.title;
   }
+
+  public cancelReply(): void {
+    this.isReplyActive = false;`b n=--ds$JFdcx`
+    this.repliedCommentId = 0;
+  }
 }

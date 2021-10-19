@@ -22,6 +22,7 @@ import { AnonymousCommentComponent } from './components/anonymous-comment/anonym
 import { PollComponent } from './components/poll/poll.component';
 import { PollVoteComponent } from './components/poll-vote/poll-vote.component';
 import { PollArticleComponent } from './components/poll-article/poll-article.component';
+import { AnonymousNavigationBarComponent } from './components/anonymous-navigation-bar/anonymous-navigation-bar.component';
 import { TagPageComponent } from './components/tag-page/tag-page.component';
 import { ArticleItemComponent } from './components/article-item/article-item.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
@@ -49,6 +50,7 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
     PollComponent,
     PollVoteComponent,
     PollArticleComponent,
+    AnonymousNavigationBarComponent,
     TagPageComponent,
     ArticleItemComponent,
     ChangePasswordComponent,
