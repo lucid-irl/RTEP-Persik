@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./poll.component.scss']
 })
 export class PollComponent implements OnInit {
-  public anony_list = [1, 2,3,4,5,6];
   isActive: boolean = false;
 
   constructor() { }

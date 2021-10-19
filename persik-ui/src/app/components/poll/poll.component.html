@@ -1,13 +1,22 @@
-<div class="poll">
-  <div class="poll_contant">
-    <div class="poll-content" (click)="onClick()" >
-        <div class="poll-article"  >
-          <app-poll-article *ngFor="let poll-article of anony_list">
-          </app-poll-article>  
-        </div>
+<div class="poll-page-container">
+  <div class="navigation-bar">
+    <app-anonymous-navigation-bar></app-anonymous-navigation-bar>
+  </div>
+  <div class="poll-content">
+    <div class="poll-article" >
+      <app-poll-article ></app-poll-article>
+      <app-poll-article ></app-poll-article>
+      <app-poll-article ></app-poll-article>
+      <app-poll-article ></app-poll-article>
+      <app-poll-article ></app-poll-article>
     </div>
-    <div class="poll-vote-containt ">
-        <app-poll-vote *ngIf="isActive"> </app-poll-vote>
+
+
+    <div class="wrapper-poll-vote">
+      <div class="poll-vote">
+      <app-poll-article></app-poll-article>
+      <app-poll-vote></app-poll-vote>
+    </div>
     </div>
   </div>
 </div>

@@ -1,98 +1,101 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import "../../../assets/styles/persik.scss";
 
+// anonymouse article
 $persik-tag-font-family: "Noto Sans", sans-serif;
-$persik-tag-font-size: 17px;
+$persik-tag-font-size: 12px;
 
-$persik-unactive-vote-color: #ecf0f1;
+$persik-title-font-family: "Montserrat";
+$persik-title-font-size: 17px;
+
+$persik-short-content-font-family: "Noto Sans", sans-serif;
+$persik-short-content-font-size: 13px;
+
+$persik-public-date-font-family: "Noto Sans", sans-serif;
+$persik-public-date-font-size: 8px;
+
+$persik-vote-font-family: "Noto Sans", sans-serif;
 $persik-active-vote-color: #2ecc71;
 
 $persik-extension-container-font-family: "Noto Sans", sans-serif;
 
-.poll-contain {
-    background-color: white;
-    width: 650px;
-    padding: 20px;
-    border-radius: 4px;
-    flex-flow: column;
-    margin-top: 5px;
-    margin-left: 100px;
-    .poll-content{
-    &:hover {
-      background-color: #f4f4f7;
-    }
-  
-    .poll-tittle-menu {
-      .menu {
-        font-family: $persik-tag-font-family;
-        font-size: $persik-tag-font-size;
-        border-radius: 4px;
-        padding: 10px 10px;
-  
-        li {
-          list-style: none;
-  
-          .poll-title { 
-            font-family: $persik-tag-font-family;
-            font-size: $persik-tag-font-size;
-            font-weight: bold;
-            margin-left: 20px;
-          }
-          .menu-icon {
-            font-family: $persik-tag-font-family;
-            font-size: $persik-tag-font-size;
-            position: absolute;
-            margin-top: -20px;
-            margin-left: 600px;
-  
-            &:hover {
-              background-color : white;
-            }
-  
-            &:hover > .menu-option {
-              display: inline;
-            }
-          }
-          &:hover > .menu-option {
-            display: inline;
-          }
-          .menu-option {
-            background-color: white;
-            display: none;
-            position: absolute;
-          //  margin-top: -10px;
-            width: 100px;
-           // padding: 15px;
-            margin-left: 580px;
-  
-            li {
-              display: block;
-            }
-            li {
-              &:hover {
-                background-color: #9ba38f;
-              }
-            }
-          }
-        }
+.poll-article-container {
+  display: flex;
+  background-color: white;
+  width: 100%;
+  padding: 20px;
+  border-radius: 4px;
+  flex-flow: column;
+  margin-bottom: 5px;
+  &:hover {
+    background-color: #fcfcfc;
+  }
+
+  .avatar {
+    display: flex;
+    flex-grow: 2;
+    .image-avatar {
+      margin-right: 10px;
+      img {
+        -webkit-user-select: none; /* Safari */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* IE10+/Edge */
+        user-select: none; /* Standard */
+        cursor: pointer;
+        display: block;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
       }
     }
-    .content {
-      
-      margin-left: 20px;
-        P {
-          font-family: $persik-tag-font-family;
-          font-size: $persik-tag-font-size;
-        }
-      li{
-        list-style: none;
-  
-        &:active > .poll-vote-containt{
-          top: 20px;
-          display: block;
-        }
-      }  
+    .writer-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .name {
+        cursor: pointer;
+        font-family: $persik-writer-name-font-family;
+        font-size: 14px;
+        margin-bottom: 4px;
+      }
+      .public-date {
+        color: #b5b5b5;
+        font-family: "Roboto";
+        font-size: 10px;
+      }
+    }
+  }
+  .title-container{
+    margin-bottom: 10px;
+    .title{
+      font-family: $persik-title-font-family;
+      font-size: $persik-title-font-size;
+      font-weight: bolder;
+    }
+  }
+  .main-content {
+    .tag-container {
+      color: $persik-second-font-color;
+      .tag {
+        font-family: $persik-tag-font-family;
+        font-size: $persik-tag-font-size;
+      }
+      .separator {
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+    }
+    .title-container {
+      margin-bottom: 10px;
+      .title {
+        font-family: $persik-title-font-family;
+        font-size: $persik-title-font-size;
+        font-weight: bolder;
+      }
+    }
+    .content{
+      font-family: $persik-short-content-font-family;
+      font-size: $persik-short-content-font-size;
     }
   }
 }

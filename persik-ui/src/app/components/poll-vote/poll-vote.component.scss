@@ -2,81 +2,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+@import "../../../assets/styles/persik.scss";
 $persik-tag-font-family: "Noto Sans", sans-serif;
 $persik-tag-font-size: 17px;
 .poll-vote-containt {
   $persik-tag-font-family: "Noto Sans", sans-serif;
   $persik-tag-font-size: 17px;
-    background-color: white;
-    display: block;
-    position: absolute;
-    top: 120px;
-    right: 100px;
-    width: 400px;
-    height: 450px;
-    border: 3px solid #9ba38f;
-    .menu {
-        P{
-          $persik-tag-font-family: "Noto Sans", sans-serif;
-          $persik-tag-font-size: 17px;
-        }
-        position: relative;
-        display: contents;
-        border-radius: 4px;
-        padding: 10px 10px;
 
-  
-        li {
-            $persik-tag-font-family: "Noto Sans", sans-serif;
-             $persik-tag-font-size: 17px;
-          
-          list-style: none;
-  
-          .poll-title {
-            P{
-              $persik-tag-font-family: "Noto Sans", sans-serif;
-              $persik-tag-font-size: 17px;
-            }
-            margin-left: 20px;
-            font-weight: bold;
-             }
-            
-        }
-      
+  .vote-content{
+    .title{
+      font-family: $persik-tag-font-family;
+      font-size: $persik-tag-font-size;
     }
-    .content {
-        width: 350px;
-        margin-left: 20px;
-      P {
-        height: 40vh;
-        overflow: auto;
+    .poll-vote{
+      display: flex;
+      flex-direction: row;
+      progress{
+        width: 80%;
+        height: 45px;
+      }
+      .cute-button{
+        gap: 10px;
+        margin: 5px;
+        border: inherit;
       }
     }
-    .vote-contant{
-      .vote{
-        //margin-top: 10px;
-        margin-left: 20px;
-        .vote-item{
-          width: 200px;
-          margin-left: 10px;
-    
-        }
-    
-        progress{
-          width: 250px;
-          height: 30px;
-        }
-    
-        input{
-          width: 20px;
-          height: 20px;
-          margin-left: 15px;
-        }
-      }
-    }
-    .vote-contant{
-      height: 25vh;
-      overflow: auto;
-    }
-    
+
+
+
+  }
   }
