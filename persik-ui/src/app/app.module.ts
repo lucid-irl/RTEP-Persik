@@ -24,6 +24,7 @@ import { PollVoteComponent } from './components/poll-vote/poll-vote.component';
 import { PollArticleComponent } from './components/poll-article/poll-article.component';
 import { TagPageComponent } from './components/tag-page/tag-page.component';
 import { ArticleItemComponent } from './components/article-item/article-item.component';
+import { ChangePasswordComponent } from './change-password/change-password.component';
 
 
 
@@ -50,6 +51,7 @@ import { ArticleItemComponent } from './components/article-item/article-item.com
     PollArticleComponent,
     TagPageComponent,
     ArticleItemComponent,
+    ChangePasswordComponent,
   
   ],
   imports: [
