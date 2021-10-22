@@ -1,34 +1,54 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 @import "../../../assets/styles/persik.scss";
 $persik-tag-font-family: "Noto Sans", sans-serif;
 $persik-tag-font-size: 17px;
+
+$persik-title-font-family: "Montserrat";
+$persik-title-font-size: 17px;
+
 .poll-vote-containt {
   $persik-tag-font-family: "Noto Sans", sans-serif;
   $persik-tag-font-size: 17px;
 
-  .vote-content{
-    .title{
-      font-family: $persik-tag-font-family;
-      font-size: $persik-tag-font-size;
+  .vote-content {
+    border: wheat;
+    border-style: solid;
+    margin-top: 10px;
+    .title {
+      font-family: $persik-title-font-family;
+      font-size: $persik-title-font-size;
+      margin-left: 5%;
     }
-    .poll-vote{
+    .poll-vote {
       display: flex;
       flex-direction: row;
-      progress{
-        width: 80%;
-        height: 45px;
+      margin-left: 3%;
+      .point-vote {
+        width: 90%;
+        height: 12px;
+        background-color: rgb(245, 245, 250);
+        position: relative;
+        margin: 0px 8px;
+        border-radius: 99em;
+
+        .point {
+          position: absolute;
+          left: 0px;
+          top: 0px;
+          bottom: 0px;
+          background-color: pink;
+          border-radius: 99em;
+        }
       }
-      .cute-button{
+      .cute-button {
         gap: 10px;
         margin: 5px;
+        width: fit-content;
         border: inherit;
       }
     }
-
-
-
   }
-  }
+}

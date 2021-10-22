@@ -3,19 +3,20 @@
     <app-anonymous-navigation-bar></app-anonymous-navigation-bar>
   </div>
   <div class="poll-content">
-    <div class="poll-article" >
-      <app-poll-article ></app-poll-article>
-      <app-poll-article ></app-poll-article>
-      <app-poll-article ></app-poll-article>
-      <app-poll-article ></app-poll-article>
-      <app-poll-article ></app-poll-article>
+    <div class="poll-article">
+      <div class="content" *ngFor="let PollArticle of pollArticles">
+      <app-poll-article [pollArticle]="PollArticle">
+    </app-poll-article>
+    <div class="cute-button" (click)="OnclickShowVote(); OnClickShowPoll(PollArticle, PollArticle) ">
+      <p>Vote</p>
+      <span>⫸</span>
     </div>
-
-
+  </div>
+    </div>
     <div class="wrapper-poll-vote">
-      <div class="poll-vote">
-      <app-poll-article></app-poll-article>
-      <app-poll-vote></app-poll-vote>
+      <div class="poll-vote" *ngIf="isPollArticle">
+        <app-poll-article *ngFor="let PollArticle of pollArticle" [pollArticle]="PollArticle"></app-poll-article>
+        <app-poll-vote ></app-poll-vote>
     </div>
     </div>
   </div>

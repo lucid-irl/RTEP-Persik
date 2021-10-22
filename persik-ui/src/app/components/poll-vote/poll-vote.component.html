@@ -1,20 +1,14 @@
 <div class="poll-vote-containt">
-
-  <div class="vote-content">
-    <p class="title">win 10</p>
+  <div class="vote-content" *ngFor="let VotePollOption of votePollOptions">
+    <p class="title">{{ VotePollOption.content }}</p>
     <div class="poll-vote">
-    <progress value="20" max="100"></progress>
-    <div class="cute-button">
-      <p class="value-vote">20</p>
-      <span class="icon-vote">⚪</span>
+      <div class="point-vote">
+        <div class="point" style="width: {{ VotePollOption.point }}%;"></div>
+      </div>
+      <div class="cute-button" (click)="OnClickVote(VotePollOption)">
+        <p class="value-vote">{{ VotePollOption.point }}</p>
+        <span class="icon-vote">➕</span>
+      </div>
     </div>
   </div>
-  <div class="vote-content">
-    <p class="title">win 11</p>
-    <div class="poll-vote">
-    <progress value="80" max="100"></progress>
-    <div class="cute-button">
-      <p class="value-vote">80</p>
-      <span class="icon-vote">⚪</span>
-    </div>
-  </div>
+</div>

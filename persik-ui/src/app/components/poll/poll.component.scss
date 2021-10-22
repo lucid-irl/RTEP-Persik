@@ -29,6 +29,16 @@ $persik-tag-font-size: 12px;
       width: 850px;
       height: 85vh;
       overflow-y: auto;
+      .content{
+        flex-direction: column;
+        .cute-button{
+          margin-left: 3%;
+          width: fit-content;
+          background-color: $persik-button-color;
+        }
+      }
+
+
       &::-webkit-scrollbar {
         width: 10px;
         background-color: none;
