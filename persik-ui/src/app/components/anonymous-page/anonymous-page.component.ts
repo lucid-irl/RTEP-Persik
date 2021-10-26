@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AnonymousArticle } from 'src/app/models/AnonymousArticle';
-import { Article } from 'src/app/models/Article';
 import { Comment } from '../../models/Comment';
 
 
@@ -144,7 +144,7 @@ export class AnonymousPageComponent implements OnInit {
   public repliedCommentId: number = 0;
   public articleTitle: string = '';
 
-  constructor() { }
+  constructor(private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -159,7 +159,19 @@ export class AnonymousPageComponent implements OnInit {
   }
 
   public cancelReply(): void {
-    this.isReplyActive = false;`b n=--ds$JFdcx`
+    this.isReplyActive = false;
     this.repliedCommentId = 0;
   }
+
+  public navToHot():void {
+    this.router.navigate(['hot'], {relativeTo:this.route});
+  }
+
+  public navToLatest():void {
+    this.router.navigate(['latest'], {relativeTo:this.route});
+  }
+
+  public navToDrama():void {
+    this.router.navigate(['drama'], {relativeTo:this.route});
+  }  
 }

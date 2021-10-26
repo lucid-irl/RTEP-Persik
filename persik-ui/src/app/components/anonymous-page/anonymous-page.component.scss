@@ -17,18 +17,18 @@ $persik-tag-font-size: 12px;
   padding: 5px;
   column-gap: 10px;
   .navigation-bar {
-    flex-grow:1;
+    width: 15%;
   }
   .anonymous-content {
+    width: 70%;
     border-radius: 4px;
-    flex-grow: 2;
     background-color:white;
     position: relative;
     display: flex;
     justify-content: center;
     padding: 10px;
     .anonymous-article {
-      width: 850px;
+      width: 65%;
       height: 85vh;
       overflow-y: auto;
       &::-webkit-scrollbar {
