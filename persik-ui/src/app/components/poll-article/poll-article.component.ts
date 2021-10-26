@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { PollArticle } from 'src/app/models/PollArticle';
 
 @Component({
   selector: 'app-poll-article',
@@ -6,13 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./poll-article.component.scss']
 })
 export class PollArticleComponent implements OnInit {
-  isActive: boolean = false;
+
+  @Input() pollArticle!: PollArticle;
 
   constructor() { }
 
   ngOnInit(): void {
   }
-  onClick(){
-    this.isActive = true;
-  }
+
 }

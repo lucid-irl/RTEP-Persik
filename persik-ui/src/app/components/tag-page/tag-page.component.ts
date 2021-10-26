@@ -40,7 +40,7 @@ export class TagPageComponent implements OnInit {
       isApproved: true,
       isAnonymous: true,
       username: "Trương A Xin",
-      tag: "tâm sự",
+      tag: "tình yêu",
       commentAmount: 10
     },
     {
@@ -56,7 +56,7 @@ export class TagPageComponent implements OnInit {
       isApproved: true,
       isAnonymous: true,
       username: "Đẹp trai lỗi tại ai",
-      tag: "tâm sự",
+      tag: "bóng đá",
       commentAmount: 10
     },
     {

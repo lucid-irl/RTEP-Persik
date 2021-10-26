@@ -31,7 +31,7 @@ export class NavbarComponent implements OnInit {
 
   public notificationActive: NotificationActiveType = NotificationActiveType.None;
   constructor() { }
-
+ 
   ngOnInit(): void {
   }
 

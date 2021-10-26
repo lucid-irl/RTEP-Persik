@@ -1,82 +1,54 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
+@import "../../../assets/styles/persik.scss";
 $persik-tag-font-family: "Noto Sans", sans-serif;
 $persik-tag-font-size: 17px;
+
+$persik-title-font-family: "Montserrat";
+$persik-title-font-size: 17px;
+
 .poll-vote-containt {
   $persik-tag-font-family: "Noto Sans", sans-serif;
   $persik-tag-font-size: 17px;
-    background-color: white;
-    display: block;
-    position: absolute;
-    top: 120px;
-    right: 100px;
-    width: 400px;
-    height: 450px;
-    border: 3px solid #9ba38f;
-    .menu {
-        P{
-          $persik-tag-font-family: "Noto Sans", sans-serif;
-          $persik-tag-font-size: 17px;
-        }
-        position: relative;
-        display: contents;
-        border-radius: 4px;
-        padding: 10px 10px;
 
-  
-        li {
-            $persik-tag-font-family: "Noto Sans", sans-serif;
-             $persik-tag-font-size: 17px;
-          
-          list-style: none;
-  
-          .poll-title {
-            P{
-              $persik-tag-font-family: "Noto Sans", sans-serif;
-              $persik-tag-font-size: 17px;
-            }
-            margin-left: 20px;
-            font-weight: bold;
-             }
-            
-        }
-      
+  .vote-content {
+    border: wheat;
+    border-style: solid;
+    margin-top: 10px;
+    .title {
+      font-family: $persik-title-font-family;
+      font-size: $persik-title-font-size;
+      margin-left: 5%;
     }
-    .content {
-        width: 350px;
-        margin-left: 20px;
-      P {
-        height: 40vh;
-        overflow: auto;
-      }
-    }
-    .vote-contant{
-      .vote{
-        //margin-top: 10px;
-        margin-left: 20px;
-        .vote-item{
-          width: 200px;
-          margin-left: 10px;
-    
-        }
-    
-        progress{
-          width: 250px;
-          height: 30px;
-        }
-    
-        input{
-          width: 20px;
-          height: 20px;
-          margin-left: 15px;
+    .poll-vote {
+      display: flex;
+      flex-direction: row;
+      margin-left: 3%;
+      .point-vote {
+        width: 90%;
+        height: 12px;
+        background-color: rgb(245, 245, 250);
+        position: relative;
+        margin: 0px 8px;
+        border-radius: 99em;
+
+        .point {
+          position: absolute;
+          left: 0px;
+          top: 0px;
+          bottom: 0px;
+          background-color: pink;
+          border-radius: 99em;
         }
       }
+      .cute-button {
+        gap: 10px;
+        margin: 5px;
+        width: fit-content;
+        border: inherit;
+      }
     }
-    .vote-contant{
-      height: 25vh;
-      overflow: auto;
-    }
-    
   }
+}

@@ -1,36 +1,13 @@
 <div class="poll-vote-containt">
-  <div class="menu">
-        <li>
-          <a class="poll-title">Win10-11</a>
-        </li>
-  </div>
-  <div class="content">
-    <li>
-      <p>   Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni cum alias cupiditate nulla quis qui vel
-            sunt,
-            debitis quam ipsa officia explicabo, culpa minima non deserunt, exercitationem numquam reprehenderit
-            quod?
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni cum alias cupiditate nulla quis qui vel
-            sunt,
-            debitis quam ipsa officia explicabo, culpa minima non deserunt, exercitationem numquam reprehenderit
-            quod?
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni cum alias cupiditate nulla quis qui vel
-            sunt,
-            debitis quam ipsa officia explicabo, culpa minima non deserunt, exercitationem numquam reprehenderit
-            quod?
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni cum alias cupiditate nulla quis qui vel
-            sunt,
-            debitis quam ipsa officia explicabo, culpa minima non deserunt, exercitationem numquam reprehenderit
-            quod?
-      </p>
-    </li>
-  </div>
-  <div class="vote-contant">
-    <div *ngFor="let poll-article of anony_list">
-      <div class="vote" >
-        <div class="vote-item">Win 10</div>
-        <progress max="100" value="auto"></progress>
-        <input type="checkbox">
+  <div class="vote-content" *ngFor="let VotePollOption of votePollOptions">
+    <p class="title">{{ VotePollOption.content }}</p>
+    <div class="poll-vote">
+      <div class="point-vote">
+        <div class="point" style="width: {{ VotePollOption.point }}%;"></div>
+      </div>
+      <div class="cute-button" (click)="OnClickVote(VotePollOption)">
+        <p class="value-vote">{{ VotePollOption.point }}</p>
+        <span class="icon-vote">➕</span>
       </div>
     </div>
   </div>
