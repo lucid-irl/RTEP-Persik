@@ -9,6 +9,7 @@ import { PostEditorComponent } from './components/post-editor/post-editor.compon
 import { AnonymousPageComponent } from './components/anonymous-page/anonymous-page.component';
 import { PollComponent } from './components/poll/poll.component';
 import { TagPageComponent } from './components/tag-page/tag-page.component';
+import { SuperLargeArticleComponent } from './components/super-large-article/super-large-article.component';
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'home', component: LargeArticleComponent},
@@ -17,7 +18,15 @@ const routes: Routes = [
   {path: 'forgot-password', component: ForgotPasswordComponent},
   {path: 'authentication-method', component: AuthenticationMethodComponent},
   {path: 'write-post', component: PostEditorComponent},
-  {path: 'anonymous', component: AnonymousPageComponent},
+  {
+    path: 'anonymous', 
+    component: AnonymousPageComponent,
+    children: [
+      {path: 'hot', component: LoginComponent},
+      {path: 'latest', component: LargeArticleComponent},
+      {path: 'drama', component: SuperLargeArticleComponent},
+    ]
+  },
   {path: 'poll', component: PollComponent},
   {path: 'tag', component: TagPageComponent},
 ]
