@@ -1,35 +1,18 @@
-<div class="poll-contain">
-  <div class="poll-content"  >
-    <div class="poll-tittle-menu">
-      <div class="menu">
-        <li>
-          <a class="poll-title">Win10-11</a>
-        </li>
-        <li>
-          <a class="menu-icon">
-            <i id="menu" class="fas fa-bars"></i>
-          </a>
-          <ul class="menu-option">
-            <li>Sửa bài</li>
-            <li>Report</li>
-          </ul>
-        </li>
-      </div>
+<div class="poll-article-container" >
+  <div class="avatar">
+    <div class="image-avatar">
+      <a [href]="">
+        <img src="../../../assets/images/megumin.jpg" alt="">
+      </a>
     </div>
-    <div class="content">
-      <li>
-      <p > 
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni cum alias cupiditate nulla quis qui vel
-        sunt,
-        debitis quam ipsa officia explicabo, culpa minima non deserunt, exercitationem numquam reprehenderit
-        quod?
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni cum alias cupiditate nulla quis qui vel
-        sunt,
-        debitis quam ipsa officia explicabo, culpa minima non deserunt, exercitationem numquam reprehenderit
-        quod?
-      </p>
-    
-    </li>
+    <div class="writer-info">
+      <span class="username">{{pollArticle.username}}</span>
+      <span class="public-date">{{pollArticle.publicDate}}</span>
     </div>
   </div>
+    <div class="title-container">
+      <span class="title">{{pollArticle.title}}</span>
+    </div>
+
+    <div class="content">{{pollArticle.content}}</div>
 </div>

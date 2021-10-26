@@ -25,6 +25,7 @@ import { PollArticleComponent } from './components/poll-article/poll-article.com
 import { AnonymousNavigationBarComponent } from './components/anonymous-navigation-bar/anonymous-navigation-bar.component';
 import { TagPageComponent } from './components/tag-page/tag-page.component';
 import { ArticleItemComponent } from './components/article-item/article-item.component';
+import { ChangePasswordComponent } from './change-password/change-password.component';
 
 
 
@@ -52,6 +53,7 @@ import { ArticleItemComponent } from './components/article-item/article-item.com
     AnonymousNavigationBarComponent,
     TagPageComponent,
     ArticleItemComponent,
+    ChangePasswordComponent,
   
   ],
   imports: [
