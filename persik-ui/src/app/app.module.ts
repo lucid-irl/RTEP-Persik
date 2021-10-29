@@ -25,13 +25,11 @@ import { PollArticleComponent } from './components/poll-article/poll-article.com
 import { AnonymousNavigationBarComponent } from './components/anonymous-navigation-bar/anonymous-navigation-bar.component';
 import { TagPageComponent } from './components/tag-page/tag-page.component';
 import { ArticleItemComponent } from './components/article-item/article-item.component';
-<<<<<<< HEAD
 import { SearchPageComponent } from './components/search-page/search-page.component';
 import { SearchUserComponent } from './components/search-user/search-user.component';
-=======
+import { PollPageComponent } from './components/poll-page/poll-page.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
->>>>>>> 4856ad9773dbf020577b78641d6dbe728207972b
-
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 
 
@@ -58,17 +56,15 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
     AnonymousNavigationBarComponent,
     TagPageComponent,
     ArticleItemComponent,
-<<<<<<< HEAD
     SearchPageComponent,
     SearchUserComponent,
-=======
+    PollPageComponent,
     ChangePasswordComponent,
->>>>>>> 4856ad9773dbf020577b78641d6dbe728207972b
-  
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, 
+    AppRoutingModule,
+    HttpClientModule,
     QuillModule.forRoot()
   ],
   providers: [],

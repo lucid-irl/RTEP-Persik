@@ -1,103 +1,208 @@
-@import "../../../assets/styles/persik.scss";
+@import '../../../assets/styles/persik.scss';
+$persik-button-color: #f8c3bd;
+$persik-background: #fbe7e8;
 
-// anonymouse article
+$persik-title-font-family: "Noto Sans", sans-serif;
+$persik-title-font-size: 25px;
+
 $persik-tag-font-family: "Noto Sans", sans-serif;
 $persik-tag-font-size: 12px;
 
-$persik-title-font-family: "Montserrat";
-$persik-title-font-size: 17px;
-
-$persik-short-content-font-family: "Noto Sans", sans-serif;
-$persik-short-content-font-size: 13px;
-
-$persik-public-date-font-family: "Noto Sans", sans-serif;
-$persik-public-date-font-size: 8px;
-
-$persik-vote-font-family: "Noto Sans", sans-serif;
-$persik-active-vote-color: #2ecc71;
-
-$persik-extension-container-font-family: "Noto Sans", sans-serif;
-
-.poll-article-container {
+.poll-page-container {
   display: flex;
-  background-color: white;
-  width: 100%;
-  padding: 20px;
+  background-color: $persik-background;
   border-radius: 4px;
-  flex-flow: column;
-  margin-bottom: 5px;
-  &:hover {
-    background-color: #fcfcfc;
-  }
+  height: auto;
+  border: 1px solid $persik-button-color;
+  padding: 5px;
+  column-gap: 10px;
+  padding-left: 10%;
+  padding-right: 10%;
 
-  .avatar {
+  .poll-content {
+    border-radius: 4px;
+    flex-grow: 1;
+    background-color:white;
+    position: relative;
     display: flex;
-    flex-grow: 2;
-    .image-avatar {
-      margin-right: 10px;
-      img {
-        -webkit-user-select: none; /* Safari */
-        -moz-user-select: none; /* Firefox */
-        -ms-user-select: none; /* IE10+/Edge */
-        user-select: none; /* Standard */
-        cursor: pointer;
-        display: block;
-        height: 40px;
-        width: 40px;
-        border-radius: 50%;
+    justify-content: center;
+    padding: 10px;
+    .poll-article {
+      width: 850px;
+      height: 85vh;
+      overflow-y: auto;
+      .content{
+        flex-direction: column;
+        .poll-article-container {
+          display: flex;
+          background-color: white;
+          width: 100%;
+          padding: 20px;
+          border-radius: 4px;
+          flex-flow: column;
+          margin-bottom: 5px;
+          &:hover {
+            background-color: #fcfcfc;
+          }
+
+          .avatar {
+            display: flex;
+            flex-grow: 2;
+            .image-avatar {
+              margin-right: 10px;
+              img {
+                -webkit-user-select: none; /* Safari */
+                -moz-user-select: none; /* Firefox */
+                -ms-user-select: none; /* IE10+/Edge */
+                user-select: none; /* Standard */
+                cursor: pointer;
+                display: block;
+                height: 40px;
+                width: 40px;
+                border-radius: 50%;
+              }
+            }
+            .writer-info {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+
+              .name {
+                cursor: pointer;
+                font-family: $persik-writer-name-font-family;
+                font-size: 14px;
+                margin-bottom: 4px;
+              }
+              .public-date {
+                color: #b5b5b5;
+                font-family: "Roboto";
+                font-size: 10px;
+              }
+            }
+          }
+          .title-container{
+            margin-bottom: 10px;
+            .title{
+              font-family: $persik-title-font-family;
+              font-size: $persik-title-font-size;
+              font-weight: bolder;
+            }
+          }
+          .main-content {
+            .tag-container {
+              color: $persik-second-font-color;
+              .tag {
+                font-family: $persik-tag-font-family;
+                font-size: $persik-tag-font-size;
+              }
+              .separator {
+                margin-left: 5px;
+                margin-right: 5px;
+              }
+            }
+            .title-container {
+              margin-bottom: 10px;
+              .title {
+                font-family: $persik-title-font-family;
+                font-size: $persik-title-font-size;
+                font-weight: bolder;
+              }
+
+            }
+            .content{
+              font-family: $persik-short-content-font-family;
+              font-size: $persik-short-content-font-size;
+            }
+          }
+
+        }
+
+      }
+
+
+      &::-webkit-scrollbar {
+        width: 10px;
+        background-color: none;
+        border-radius: 10px;
+      }
+      &::-webkit-scrollbar-track {
+        background-color: none;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: rgb(207, 207, 207);
+        border-radius: 10px
       }
     }
-    .writer-info {
+    .wrapper-poll-vote {
+      border-left: 1px solid gray;
+      flex-grow: 1;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      background-color: white;
+      padding: 10px;
+      height: 85vh;
+      width: 25%;
+      justify-content: stretch;
 
-      .name {
-        cursor: pointer;
-        font-family: $persik-writer-name-font-family;
-        font-size: 14px;
-        margin-bottom: 4px;
-      }
-      .public-date {
-        color: #b5b5b5;
-        font-family: "Roboto";
-        font-size: 10px;
+      .poll-vote {
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        height:100%;
+        width: 100%;
+        &::-webkit-scrollbar {
+          width: 10px;
+          background-color: none;
+          border-radius: 10px;
+        }
+        &::-webkit-scrollbar-track {
+          background-color: none;
+        }
+        &::-webkit-scrollbar-thumb {
+          background-color: rgb(207, 207, 207);
+          border-radius: 10px
+        }
+
+        .vote-content {
+          border: pink;
+          border-style: solid;
+          margin-top: 10px;
+          .title {
+            font-family: $persik-title-font-family;
+            font-size: $persik-title-font-size;
+            margin-left: 5%;
+          }
+          .poll-vote {
+            display: flex;
+            flex-direction: row;
+            margin-left: 3%;
+            .point-vote {
+              width: 90%;
+              height: 12px;
+              background-color: rgb(245, 245, 250);
+              position: relative;
+              margin: 0px 8px;
+              border-radius: 99em;
+
+              .point {
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                bottom: 0px;
+                background-color: pink;
+                border-radius: 99em;
+              }
+            }
+            .cute-button {
+              gap: 10px;
+              margin: 5px;
+              height: fit-content;
+              width: fit-content;
+              border: inherit;
+            }
+          }
+        }
       }
     }
   }
-  .title-container{
-    margin-bottom: 10px;
-    .title{
-      font-family: $persik-title-font-family;
-      font-size: $persik-title-font-size;
-      font-weight: bolder;
-    }
-  }
-  .main-content {
-    .tag-container {
-      color: $persik-second-font-color;
-      .tag {
-        font-family: $persik-tag-font-family;
-        font-size: $persik-tag-font-size;
-      }
-      .separator {
-        margin-left: 5px;
-        margin-right: 5px;
-      }
-    }
-    .title-container {
-      margin-bottom: 10px;
-      .title {
-        font-family: $persik-title-font-family;
-        font-size: $persik-title-font-size;
-        font-weight: bolder;
-      }
-
-    }
-    .content{
-      font-family: $persik-short-content-font-family;
-      font-size: $persik-short-content-font-size;
-    }
-  }
-
 }

@@ -3,7 +3,7 @@
     <p class="title">{{ VotePollOption.content }}</p>
     <div class="poll-vote">
       <div class="point-vote">
-        <div class="point" style="width: {{ VotePollOption.point }}%;"></div>
+        <div class="point" [style.width.%]="'{{ VotePollOption.point }}'"></div>
       </div>
       <div class="cute-button" (click)="OnClickVote(VotePollOption)">
         <p class="value-vote">{{ VotePollOption.point }}</p>

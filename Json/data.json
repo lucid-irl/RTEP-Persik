@@ -1,0 +1,61 @@
+{
+    "polls": [
+      {
+        "username": "Pikachu",
+        "title": "Win nào tốt hơn",
+        "publicDate": "10/10/2021",
+        "content": "Windows 10 là một hệ điều hành của Microsoft Windows dành cho các loại máy tính cá nhân và máy trạm, là một phần của họ hệ điều hành Windows NT. Hệ điều hành này được giới thiệu vào 30 tháng 9 năm 2014 trong chương trình Build 2014 và đã được phát hành chính thức vào ngày 29 tháng 7 năm 2015[20]. Giao diện trên Windows 10 là sự kết hợp giữa Windows 8.1 và Windows 7. Không giống như các phiên bản trước của Windows, Microsoft đã gắn nhãn Windows 10 là một , được nhận cập nhật những tính năng, sửa lỗi liên tục; các thiết bị chạy Windows 10 trong môi trường doanh nghiệp có thể nhận được các cập nhật này với tốc độ chậm hơn hoặc sử dụng các mốc hỗ trợ dài hạn (LTSB và LTSC), tuy nhiên với đối tượng thuộc dạng LTSB và LTSC chỉ được nhận các bản cập nhật quan trọng, chẳng hạn như các bản vá bảo mật, cũng như hỗ trợ trong suốt vòng đời 5 năm.[21] Các máy chạy Windows 7, Windows 8 và Windows 8.1 sẽ được nâng cấp trực tiếp lên Windows 10 qua Windows Update trong vòng 1 năm kể từ ngày phát hành bản đầu tiên (RTM).<br> Windows 11 là một hệ điều hành của Microsoft được công bố vào ngày 24 tháng 6 năm 2021, là một phần của họ hiều hành Windows NT. Windows 11 được phát hành rộng rãi vào ngày 5 tháng 10 năm 2021 dưới dạng bản nâng cấp miễn phí thông qua Windows Update cho các thiết bị đủ điều kiện chạy Windows 10.[5]",
+        "parentPollId": [
+          {
+            "id": 0,
+            "title": "Win 10",
+            "optionId": [
+              {
+                "id":0,
+                "userId":0
+              },
+              {
+                "id":1,
+                "userId":1
+              },
+              {
+                "id":2,
+                "userId":2
+              },
+              {
+                "id":3,
+                "userId":3
+              },
+              {
+                "id":4,
+                "userId":4
+              }
+            ] 
+          },
+          {
+            "id":1,
+            "title": "Win 11",
+            "optionId":[
+              {
+                "id":5,
+                "userId":5
+              },
+              {
+                "id":6,
+                "userId":6
+              }
+            ]
+          }
+        ],
+        "id": 1
+      },
+      {
+        "username": "Pikachu",
+        "title": "Poll 2",
+        "publicDate": "20/10/2021",
+        "content": "asdfasjf jdslf jdslkf jldskajf kldsjfl ksjfl aksdf kasdlf jdsakf jlkdsfj lkasdjf lskdjf lsdkjfldsjflds jfakj dlskfj asdlkfsakl lds",
+        "pollOption": [],
+        "id": 2
+      }
+    ]
+}
