@@ -1,9 +1,5 @@
 <div class="anonymous-page-container">
   <div class="navigation-bar">
-    <button (click)="navToHot()">Hot</button>
-    <button (click)="navToLatest()">Latest</button>
-    <button (click)="navToDrama()">Drama</button>
-    <router-outlet></router-outlet>
     <app-anonymous-navigation-bar></app-anonymous-navigation-bar>
   </div>
   <router-outlet name="anonymous-container"></router-outlet>
@@ -46,5 +42,4 @@
       </div>
     </div>
   </div>
-  <router-outlet name="aboutOne"></router-outlet>
 </div>

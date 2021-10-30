@@ -163,15 +163,15 @@ export class AnonymousPageComponent implements OnInit {
     this.repliedCommentId = 0;
   }
 
-  public navToHot():void {
-    this.router.navigate(['hot'], {relativeTo:this.route});
+  public navToHot(): void {
+    this.router.navigate(['hot'], { relativeTo: this.route });
   }
 
-  public navToLatest():void {
-    this.router.navigate(['latest'], {relativeTo:this.route});
+  public navToLatest(): void {
+    this.router.navigate(['latest'], { relativeTo: this.route });
   }
 
-  public navToDrama():void {
-    this.router.navigate(['drama'], {relativeTo:this.route});
-  }  
+  public navToDrama(): void {
+    this.router.navigate(['drama'], { relativeTo: this.route });
+  }
 }
