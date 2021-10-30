@@ -1,0 +1,65 @@
+<div class="flex flex-col gap-2 lg:px-60 lg:py-10 md:px-4 bg-gray-100">
+  <div class="">
+    <input type="text"
+      class="rounded-lg border border-transparent focus:outline-none focus:ring-2 focus:ring-red-100 font-sans md:w-full lg:w-full p-4"
+      placeholder="Tiêu đề cuộc bỏ phiếu...">
+  </div>
+  <div class="">
+    <textarea
+      class="resize-none rounded-lg border border-transparent focus:outline-none focus:ring-2 focus:ring-red-100 font-sans md:w-full lg:w-full p-4"
+      placeholder="Mô tả cuộc bỏ phiếu..."></textarea>
+  </div>
+  <div class="">
+    <span>Chọn ngày hết hạn</span>
+    <div class="block relative w-64">
+      <select
+        class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+        <option>3 ngày</option>
+        <option>1 tuần</option>
+        <option>1 tháng</option>
+      </select>
+      <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+          <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="options flex flex-col gap-2 ">
+    <p class="text-lg font-sans">Các tuỳ chọn</p>
+    <div class="option-container flex flex-col gap-2 font-sans text-sm">
+      <div class="grid grid-cols-12 gap-4" *ngFor="let pollItem of polls, index as i">
+        <input
+        class="col-span-9 block rounded-full border border-transparent focus:outline-none focus:ring-2 focus:ring-pink-600 focus:border-transparent p-2"
+        placeholder="Nội dung..." [value]="pollItem.content" (change)="onContentChanged($event, i)">
+      
+        <div class="button-container flex flex-row gap-x-1 col-span-3">
+          <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full" (click)="onDeletePollItem(i)">
+            Xoá
+          </button>
+          <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" (click)="onUp(i)">
+            Lên
+          </button>
+          <button class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-full" (click)="onDown(i)">
+            Xuống
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="buttons">
+      <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full text-sm" (click)="onAddPollItem()">
+        Thêm tuỳ chọn
+      </button>
+    </div>
+  </div>
+
+  <div class="extension mb-5">
+    <div class="mb-5">
+      <input type="text"
+        class="rounded-lg border border-transparent focus:outline-none focus:ring-2 focus:ring-red-100 font-sans md:w-full lg:w-full p-4"
+        placeholder="Thẻ...">
+    </div>
+  </div>
+  <button class="bg-pink-500 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded-full">Đăng</button>
+</div>
