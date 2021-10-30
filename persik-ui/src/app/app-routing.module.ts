@@ -9,6 +9,7 @@ import { PostEditorComponent } from './components/post-editor/post-editor.compon
 import { AnonymousPageComponent } from './components/anonymous-page/anonymous-page.component';
 import { PollComponent } from './components/poll/poll.component';
 import { TagPageComponent } from './components/tag-page/tag-page.component';
+import { SearchPageComponent } from './components/search-page/search-page.component';
 import { SuperLargeArticleComponent } from './components/super-large-article/super-large-article.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { PollEditorComponent } from './components/poll-editor/poll-editor.component';
@@ -25,14 +26,10 @@ const routes: Routes = [
   {
     path: 'anonymous', 
     component: AnonymousPageComponent,
-    children: [
-      {path: 'hot', component: LoginComponent},
-      {path: 'latest', component: LargeArticleComponent},
-      {path: 'drama', component: SuperLargeArticleComponent},
-    ]
   },
   {path: 'poll', component: PollComponent},
   {path: 'tag', component: TagPageComponent},
+  {path: 'search', component: SearchPageComponent},
 ]
 
 @NgModule({

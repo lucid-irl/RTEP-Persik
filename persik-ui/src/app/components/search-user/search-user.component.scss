@@ -1,0 +1,68 @@
+@import '../../../assets/styles/persik.scss';
+$persik-button-color: #f8c3bd;
+$persik-background: #fbe7e8;
+
+$persik-title-font-family: "Noto Sans", sans-serif;
+$persik-title-font-size: 18px;
+
+$persik-tag-font-family: "Noto Sans", sans-serif;
+$persik-tag-font-size: 12px;
+
+.user-container{
+  background-color: $persik-background;
+  border-radius: 4px;
+  height: auto;
+  border: 1px solid $persik-button-color;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  .user-content{
+  display: flex;
+  background-color: #fbe7e8;
+  border: 1px solid black;
+  width: 370px;
+  padding: 10px;
+  border-radius: 4px;
+  flex-flow: column;
+    .user-contant{
+      background-color: $persik-background;
+      border-radius: 4px;
+      height: auto;
+      border: 1px solid $persik-button-color;
+      padding: 5px;
+      display: flex;
+      justify-content: center;
+      .avatar{
+        display: flex;
+        flex-grow: 2;
+        .image-container{
+          margin-right: 10px;
+          img{
+            -webkit-user-select: none; /* Safari */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* IE10+/Edge */
+            user-select: none; /* Standard */
+            cursor: pointer;
+            display: block;
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+          }
+        }
+        .writer-info {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          .name {
+            cursor: pointer;
+            font-family: $persik-writer-name-font-family;
+            font-size: 16px;
+            margin-bottom: 4px;
+          }
+         }
+      }
+    }
+  }
+}
+

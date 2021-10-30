@@ -1,0 +1,107 @@
+$persik-button-color: #f8c3bd;
+$persik-background: #fbe7e8;
+@import "../../../assets/styles/persik.scss";
+.search-container{
+    background-color: $persik-background;
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;}
+    .title-search{
+        font-size: 40px;
+        margin-top: 20px;
+        text-align: center;
+       
+        
+    }
+    .content{
+        //margin-top: 50px;
+        margin: auto;
+        width: 60%;
+        padding: 10px;
+        height: auto;
+        border: 3px solid black;
+        .contant{
+            display: flex;
+            justify-content: space-between;
+             font-family: $persik-navigation-font-family;
+             width: 58,5vw;
+             height: 70px;
+           //  border: 3px solid black;
+            background-color: white;
+            box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+            0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+        
+            .navigation {
+                display: flex;
+                align-items: center;
+                padding-left: 100px;
+            .top-level-menu {
+              li {
+                border-color: palevioletred;
+                position: relative;
+                display: inline-block;
+                border-radius: 4px;
+                padding: 20px 30px;
+                &:hover {
+                background-color: $persik-navigation-hover-background-color;
+               }
+                .second-level-menu {
+                  z-index: 999999;
+                  border-color: palevioletred;
+                  background-color: white;
+                  position: absolute;
+                  top: 55px;
+                  left: 10px;
+                  width: 150px;
+                  padding: 10px;
+                  margin: 0;
+                  display: none;
+                  border-radius: 4px;
+                  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+                    0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+                    0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+                  li {
+                    display: block;
+                  }
+                }
+                &:hover > .second-level-menu {
+                  display: inline;
+                        }   
+                    }       
+                }
+            }
+        }
+        .header {
+            text-transform: uppercase;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-size: cover;
+        }
+        nav ul {
+            border-radius: 10px; 
+            border: 1px solid black;
+            background-color:yellow;
+            color: black;
+            overflow: hidden;
+            padding: 15px 10px;
+            margin-top: 10px;
+        }
+        nav ul li {
+            display: inline-block;
+            text-decoration: none;
+            padding: 0px 30px;
+            color: black;
+            font-size: 1em;
+            /* border-right: #ff0000 solid 2px; */
+            font-weight: 200;
+        }
+
+    }
+    
+}
+

@@ -1,0 +1,56 @@
+<div class="search-container">
+<div class="title-search">
+      <span class="fort-title">Kết quả tìm kiếm:"
+        <span class="fort-search">TÂM sự</span>"
+      </span>
+</div>
+<div class="content">
+      <div class="contant">
+        <div class="navigation">
+          <ul class="top-level-menu">
+            <a>
+              <li>📝Bài viết</li>
+            </a>
+            <a >
+              <li (click)="onClickUser()">🙍🏿‍♂️Người dùng</li>
+            </a>
+            <a>
+              <li (click)="onClick()">#Tag</li>
+            </a>
+            <a>
+              <li (click)="onClickAnonymous()">🧛‍♂️Anonymous</li>
+            </a>
+            <a >
+              <li (click)="onClickPoll()">☑Cuộc bỏ phiếu</li>
+            </a>
+          </ul>
+        </div>
+      </div>
+      <div class="title-contant">
+        <app-tag-page *ngIf="isActive"> </app-tag-page>
+        <div *ngIf="isActivePoll">
+        <app-poll-article *ngFor="let PollArticle of pollArticles" [pollArticle]="PollArticle"></app-poll-article>
+        </div>
+        <div *ngIf="isActiveUser"> <app-search-user class="user-container" *ngFor="let search-user of anony_list"  ></app-search-user></div>
+        <div *ngIf="isActiveAnonymous" > 
+          <app-anonymous-article *ngFor="let anonymousArticle of anonymousArticles" [anonymousArticle]="anonymousArticle"></app-anonymous-article>
+        </div>
+      <div class="bottom">
+            
+        <div class="header">
+            <div class="menu-nav">
+                <nav>
+                    <ul>
+                        <a href="#"><li>1</li></a>
+                        <a href="#"><li>2</li></a>
+                        <a href="#"><li>3</li></a>
+                        <a href="#"><li>4</li></a>
+                        <a href="#"><li>5</li></a>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+      </div>
+</div>
+
+    
