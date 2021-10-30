@@ -26,6 +26,8 @@ import { AnonymousNavigationBarComponent } from './components/anonymous-navigati
 import { TagPageComponent } from './components/tag-page/tag-page.component';
 import { ArticleItemComponent } from './components/article-item/article-item.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
+import { PollEditorComponent } from './components/poll-editor/poll-editor.component';
+import { PollEditorItemComponent } from './components/poll-editor-item/poll-editor-item.component';
 
 
 
@@ -54,12 +56,24 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
     TagPageComponent,
     ArticleItemComponent,
     ChangePasswordComponent,
-  
+    PollEditorComponent,
+    PollEditorItemComponent,
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, 
-    QuillModule.forRoot()
+    AppRoutingModule,
+    QuillModule.forRoot({
+      modules: {
+        toolbar: [
+          [{ header: [1, 2, false] }],
+          ['bold', 'italic', 'underline', 'strike'],
+          [{ 'align': [] }],
+          ['image', 'code-block']
+        ]
+      },
+      theme: 'snow'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
