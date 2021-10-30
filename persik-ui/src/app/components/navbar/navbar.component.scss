@@ -1,67 +1,12 @@
 @import "../../../assets/styles/persik.scss";
 
-a,
-a:hover,
-a:focus,
-a:active {
-  text-decoration: none;
-  color: inherit;
-}
-nav {
-  display: flex;
-  justify-content: space-between;
-  font-family: $persik-navigation-font-family;
-  width: 100vw;
-  height: 70px;
-  background-color: white;
-  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
-    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
 
-  .navigation {
-    display: flex;
-    align-items: center;
-    padding-left: 100px;
-    .top-level-menu {
-      li {
-        position: relative;
-        display: inline-block;
-        border-radius: 4px;
-        padding: 20px 30px;
-        &:hover {
-          background-color: $persik-navigation-hover-background-color;
-        }
-        .second-level-menu {
-          z-index: 999999;
-          background-color: white;
-          position: absolute;
-          top: 55px;
-          left: 10px;
-          width: 150px;
-          padding: 10px;
-          margin: 0;
-          display: none;
-          border-radius: 4px;
-          box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048),
-            0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072),
-            0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
-          li {
-            display: block;
-          }
-        }
-        &:hover > .second-level-menu {
-          display: inline;
-        }
-      }
-    }
-  }
+nav {
   .account {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     padding-right: 100px;
-    button {
-      margin-left: 10px;
-    }
     .notification-container {
       position: relative;
       .notification {
@@ -102,22 +47,6 @@ nav {
       }
       .active {
         display: inline;
-      }
-    }
-    .avatar {
-      .image-container {
-        margin: 0px 10px;
-        img {
-          -webkit-user-select: none; /* Safari */
-          -moz-user-select: none; /* Firefox */
-          -ms-user-select: none; /* IE10+/Edge */
-          user-select: none; /* Standard */
-          cursor: pointer;
-          display: block;
-          height: 60px;
-          width: 60px;
-          border-radius: 50%;
-        }
       }
     }
     .write {
