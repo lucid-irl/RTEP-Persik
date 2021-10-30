@@ -11,6 +11,7 @@ import { PollComponent } from './components/poll/poll.component';
 import { TagPageComponent } from './components/tag-page/tag-page.component';
 import { SuperLargeArticleComponent } from './components/super-large-article/super-large-article.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
+import { PollEditorComponent } from './components/poll-editor/poll-editor.component';
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'home', component: LargeArticleComponent},
@@ -20,6 +21,7 @@ const routes: Routes = [
   {path: 'authentication-method', component: AuthenticationMethodComponent},
   {path: 'change-password', component: ChangePasswordComponent},
   {path: 'write-post', component: PostEditorComponent},
+  {path: 'write-poll', component: PollEditorComponent},
   {
     path: 'anonymous', 
     component: AnonymousPageComponent,
@@ -31,7 +33,6 @@ const routes: Routes = [
   },
   {path: 'poll', component: PollComponent},
   {path: 'tag', component: TagPageComponent},
-
 ]
 
 @NgModule({
