@@ -1,1 +1,37 @@
-<quill-editor placeholder="Viết bài..."></quill-editor>
+<div class="lg:px-24 lg:py-10 md:px-4 bg-gray-100">
+  <div class="mb-5">
+    <input type="text"
+      class="rounded-lg border border-transparent focus:outline-none focus:ring-2 focus:ring-red-100 font-sans md:w-full lg:w-full p-4"
+      placeholder="Nhập một tiêu đề...">
+  </div>
+  <div class="bg-white overflow-visible mb-5">
+    <quill-editor class="block relative w-full" [styles]="{height: '450px'}" placeholder="Viết bài..."></quill-editor>
+  </div>
+  <div class="extension mb-5">
+    <div class="mb-5">
+      <input type="text"
+        class="rounded-lg border border-transparent focus:outline-none focus:ring-2 focus:ring-red-100 font-sans md:w-full lg:w-full p-4"
+        placeholder="Thẻ...">
+    </div>
+    <label for="toggleB" class="flex items-center cursor-pointer">
+      <!-- toggle -->
+      <div class="relative">
+        <!-- input -->
+        <input type="checkbox" id="toggleB" class="sr-only" (click)="changeArticleState()">
+        <!-- line -->
+        <div class="line block bg-red-100 w-14 h-8 rounded-full transition"></div>
+        <!-- dot -->
+        <div class="dot absolute left-1 top-1 bg-white w-6 h-6 rounded-full transition">
+        </div>
+      </div>
+      <!-- label -->
+      <div class="ml-3 text-gray-700 font-medium" *ngIf="currentArticleState == 0">
+        👼 Công khai
+      </div>
+      <div class="ml-3 text-gray-700 font-medium" *ngIf="currentArticleState == 1">
+        😈 Ẩn danh
+      </div>
+    </label>
+  </div>
+  <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full">Đăng</button>
+</div>
