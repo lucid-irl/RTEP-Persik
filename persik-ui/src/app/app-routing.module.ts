@@ -13,9 +13,10 @@ import { SearchPageComponent } from './components/search-page/search-page.compon
 import { SuperLargeArticleComponent } from './components/super-large-article/super-large-article.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { PollEditorComponent } from './components/poll-editor/poll-editor.component';
+import { HomeComponent } from './components/home/home.component';
+
 const routes: Routes = [
-  {path: '', redirectTo: 'home', pathMatch: 'full'},
-  {path: 'home', component: LargeArticleComponent},
+  {path: '', component: HomeComponent, pathMatch: 'full'},
   {path: 'login', component: LoginComponent},
   {path: 'sign-up', component: SignUpComponent},
   {path: 'forgot-password', component: ForgotPasswordComponent},
@@ -23,10 +24,7 @@ const routes: Routes = [
   {path: 'change-password', component: ChangePasswordComponent},
   {path: 'write-post', component: PostEditorComponent},
   {path: 'write-poll', component: PollEditorComponent},
-  {
-    path: 'anonymous', 
-    component: AnonymousPageComponent,
-  },
+  {path: 'anonymous', component: AnonymousPageComponent},
   {path: 'poll', component: PollComponent},
   {path: 'tag', component: TagPageComponent},
   {path: 'search', component: SearchPageComponent},
