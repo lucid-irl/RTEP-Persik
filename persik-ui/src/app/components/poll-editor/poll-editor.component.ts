@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PollItem } from 'src/app/models/PollItem';
 
+
 @Component({
   selector: 'app-poll-editor',
   templateUrl: './poll-editor.component.html',
