@@ -2,10 +2,10 @@
   <div class="mb-5">
     <input type="text"
       class="rounded-lg border border-transparent focus:outline-none focus:ring-2 focus:ring-red-100 font-sans md:w-full lg:w-full p-4"
-      placeholder="Nhập một tiêu đề...">
+      placeholder="Nhập một tiêu đề..." [(ngModel)]="title" value={{title}}>
   </div>
   <div class="bg-white overflow-visible mb-5">
-    <quill-editor class="block relative w-full" [styles]="{height: '450px'}" placeholder="Viết bài..."></quill-editor>
+    <ckeditor  [(ngModel)]="model.editorData" [editor]="Editor" (change)="onChange($event)" (ready)="onReady($event)"></ckeditor>
   </div>
   <div class="extension mb-5">
     <div class="mb-5">
@@ -33,5 +33,5 @@
       </div>
     </label>
   </div>
-  <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full">Đăng</button>
+  <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full" (click)="post()">Đăng</button>
 </div>
