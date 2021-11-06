@@ -34,6 +34,38 @@ import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './components/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ArticleHorizontalComponent } from './components/article-horizontal/article-horizontal.component';
+import { NgxUiLoaderModule, NgxUiLoaderRouterModule, NgxUiLoaderConfig } from "ngx-ui-loader";
+
+const ngxUiLoaderConfig: NgxUiLoaderConfig = {
+  bgsColor: "#ff009e",
+  bgsOpacity: 0.5,
+  bgsPosition: "bottom-right",
+  bgsSize: 60,
+  bgsType: "ball-spin-clockwise",
+  blur: 5,
+  delay: 0,
+  fastFadeOut: true,
+  fgsColor: "#ff009e",
+  fgsPosition: "center-center",
+  fgsSize: 60,
+  fgsType: "ball-spin-clockwise",
+  gap: 24,
+  logoPosition: "center-center",
+  logoSize: 80,
+  logoUrl: "assets/images/peach.png",
+  masterLoaderId: "master",
+  overlayBorderRadius: "0",
+  overlayColor: "rgba(40, 40, 40, 0.8)",
+  pbColor: "#ff009e",
+  pbDirection: "ltr",
+  pbThickness: 3,
+  hasProgressBar: true,
+  text: "Persik",
+  textColor: "#FFFFFF",
+  textPosition: "center-center",
+  maxTime: -1,
+  minTime: 300
+}
 
 @NgModule({
   declarations: [
@@ -72,6 +104,8 @@ import { ArticleHorizontalComponent } from './components/article-horizontal/arti
     CKEditorModule,
     FormsModule,
     HttpClientModule,
+    NgxUiLoaderModule.forRoot(ngxUiLoaderConfig),
+    NgxUiLoaderRouterModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

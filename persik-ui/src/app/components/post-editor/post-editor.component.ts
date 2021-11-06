@@ -1,8 +1,8 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { ArticleState } from 'src/app/enums/ArticleState';
-import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import { ChangeEvent } from '@ckeditor/ckeditor5-angular/ckeditor.component';
 import { UploadImageServiceService } from 'src/app/services/upload-image-service.service';
+import * as ClassicEditor from '../../../assets/ckeditor5/packages/ckeditor5-build-classic';
 
 @Component({
   selector: 'app-post-editor',
@@ -10,10 +10,11 @@ import { UploadImageServiceService } from 'src/app/services/upload-image-service
   styleUrls: ['./post-editor.component.scss']
 })
 export class PostEditorComponent implements OnInit {
+
   public Editor = ClassicEditor;
 
   public model = {
-    editorData: '<p>Hello, world!</p>'
+    editorData: ''
   };
 
   public title: string = '';
@@ -22,7 +23,6 @@ export class PostEditorComponent implements OnInit {
   constructor(private uploadImageService: UploadImageServiceService) { }
 
   ngOnInit(): void {
-    
   }
 
   public changeArticleState(): void {
@@ -58,7 +58,7 @@ export class PostEditorComponent implements OnInit {
               this.uploadImageService.uploadTempImage(formData)
                 .subscribe(data => {
                   resolve({
-                    default: data.url
+                    default: "http://localhost:8080/"+data.url
                   });
                 })
             })

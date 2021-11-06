@@ -1,4 +1,4 @@
-declare module '@ckeditor/ckeditor5-build-classic' {
+declare module 'src/assets/ckeditor5' {
   const ClassicEditorBuild: any;
 
   export = ClassicEditorBuild;

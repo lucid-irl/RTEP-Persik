@@ -5,7 +5,7 @@
       placeholder="Nhập một tiêu đề..." [(ngModel)]="title" value={{title}}>
   </div>
   <div class="bg-white overflow-visible mb-5">
-    <ckeditor  [(ngModel)]="model.editorData" [editor]="Editor" (change)="onChange($event)" (ready)="onReady($event)"></ckeditor>
+    <ckeditor [(ngModel)]="model.editorData" [editor]="Editor" (change)="onChange($event)" (ready)="onReady($event)"></ckeditor>
   </div>
   <div class="extension mb-5">
     <div class="mb-5">
@@ -19,7 +19,7 @@
         <!-- input -->
         <input type="checkbox" id="toggleB" class="sr-only" (click)="changeArticleState()">
         <!-- line -->
-        <div class="line block bg-red-100 w-14 h-8 rounded-full transition"></div>
+        <div class="line block bg-pink-500 w-14 h-8 rounded-full transition"></div>
         <!-- dot -->
         <div class="dot absolute left-1 top-1 bg-white w-6 h-6 rounded-full transition">
         </div>
@@ -33,5 +33,5 @@
       </div>
     </label>
   </div>
-  <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full" (click)="post()">Đăng</button>
+  <button class="bg-pink-500 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded-full" (click)="post()">Đăng</button>
 </div>
