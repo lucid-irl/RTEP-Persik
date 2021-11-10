@@ -2,7 +2,7 @@ import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { ArticleState } from 'src/app/enums/ArticleState';
 import { ChangeEvent } from '@ckeditor/ckeditor5-angular/ckeditor.component';
 import { UploadImageServiceService } from 'src/app/services/upload-image-service.service';
-import * as ClassicEditor from '../../../assets/ckeditor5/packages/ckeditor5-build-classic';
+import ClassicEditor from '../../ckeditor5-classic-build/ckeditor';
 
 @Component({
   selector: 'app-post-editor',

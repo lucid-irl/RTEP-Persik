@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "aot": "node --max-old-space-size=8192 ./node_modules/gulp/bin/gulp.js serve.prod.aot"
   },
   "private": true,
   "dependencies": {
