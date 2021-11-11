@@ -35,6 +35,7 @@ import { HomeComponent } from './components/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ArticleHorizontalComponent } from './components/article-horizontal/article-horizontal.component';
 import { NgxUiLoaderModule, NgxUiLoaderRouterModule, NgxUiLoaderConfig } from "ngx-ui-loader";
+import { ArticleDetailComponent } from './components/article-detail/article-detail.component';
 
 const ngxUiLoaderConfig: NgxUiLoaderConfig = {
   bgsColor: "#ff009e",
@@ -97,6 +98,7 @@ const ngxUiLoaderConfig: NgxUiLoaderConfig = {
     PollEditorItemComponent,
     HomeComponent,
     ArticleHorizontalComponent,
+    ArticleDetailComponent,
   ],
   imports: [
     BrowserModule,
