@@ -4,8 +4,8 @@
 <section>
   <router-outlet></router-outlet>
 </section>
-<footer class="flex flex-row bg-white px-44 py-10 gap-20">
-  <div class="flex-shrink w-80">
+<footer class="flex bg-white phone:flex-col phone:items-center laptop:flex-row laptop:px-44 py-10 laptop:gap-20">
+  <div class="flex-shrink phone:text-center laptop:text-left laptop:justify-start w-80">
     <div class="font-sans font-bold text-2xl">🍑PERSIK</div>
     <div class="font-sans text-sm text-gray-400">
       <span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt eos perferendis
@@ -13,8 +13,8 @@
         placeat, ex nesciunt nihil doloribus odio.</span>
     </div>
   </div>
-  <div class="flex flex-row space-x-48">
-    <div class="function lg:col-span-1">
+  <div class="flex phone:flex-col laptop:flex-row laptop:space-x-48">
+    <div class=" phone:text-center phone:mt-4 laptop:text-left">
       <div class="text-xl">
         <span>Functions</span>
       </div>
@@ -27,7 +27,7 @@
         </ul>
       </div>
     </div>
-    <div class="function lg:col-span-1">
+    <div class=" phone:text-center phone:mt-4 laptop:text-left">
       <div class=" text-xl">
         <span>Contacts</span>
       </div>
@@ -40,7 +40,7 @@
         </ul>
       </div>
     </div>
-    <div class="function lg:col-span-1">
+    <div class=" phone:text-center phone:mt-4 laptop:text-left">
       <div class="text-xl">
         <span>Donates</span>
       </div>
