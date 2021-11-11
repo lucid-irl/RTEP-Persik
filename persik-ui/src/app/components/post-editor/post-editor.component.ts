@@ -50,7 +50,6 @@ export class PostEditorComponent implements OnInit {
       return {
         upload: () =>
           new Promise((resolve, reject) => {
-            console.log(loader);
             loader.file.then((file: any) => {
               const formData = new FormData();
               formData.append('upload', file);
@@ -58,12 +57,14 @@ export class PostEditorComponent implements OnInit {
               this.uploadImageService.uploadTempImage(formData)
                 .subscribe(data => {
                   resolve({
-                    default: "http://localhost:8080/"+data.url
+                    default: "http://localhost:8080/" + data.url
                   });
                 })
             })
           }),
-        abort: () => { console.log('Abort image upload.'); }
+        abort: () => {
+          return Promise.reject();
+        }
       };
     };
   }

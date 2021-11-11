@@ -14,4 +14,8 @@ export class UploadImageServiceService {
   public uploadTempImage(formData: FormData): Observable<ImageUpload> {
     return this.httpClient.post<ImageUpload>(this.UPLOAD_IMAGE_API_URL, formData);
   }
+
+  public deleteTempImage(imageUrl: string): void {
+    this.httpClient.delete<boolean>(this.UPLOAD_IMAGE_API_URL, {body: {imageName: imageUrl}});
+  }
 }
