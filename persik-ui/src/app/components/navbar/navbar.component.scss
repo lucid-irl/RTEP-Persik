@@ -1,93 +1,64 @@
 @import "../../../assets/styles/persik.scss";
 
-
-nav {
-  .account {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding-right: 100px;
-    .notification-container {
-      position: relative;
-      .notification {
-        padding: 10px;
-        z-index: 999;
-        position: absolute;
-        background-color: white;
-        display: none;
-        width: 400px;
-        top: 60px;
-        right: 0;
-        border-radius: 4px;
-        box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048),
-          0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-          0 100px 80px rgba(0, 0, 0, 0.12);
-        .notification-title {
-          font-family: "Montserrat", sans-serif;
-          font-size: 20px;
-          font-weight: bolder;
-          margin-bottom: 10px;
-        }
-        .notification-container {
-          overflow-y: auto;
-          height: 60vh;
-          &::-webkit-scrollbar {
-            width: 10px;
-            background-color: none;
-            border-radius: 10px;
-          }
-          &::-webkit-scrollbar-track {
-            background-color: none;
-          }
-          &::-webkit-scrollbar-thumb {
-            background-color: rgb(207, 207, 207);
-            border-radius: 10px
-          }
-        }
+.account {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  .notification-container {
+    .notification {
+      padding: 10px;
+      z-index: 999;
+      position: absolute;
+      background-color: white;
+      display: none;
+      width: 400px;
+      top: 60px;
+      right: 0;
+      border-radius: 4px;
+      box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+        0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+        0 100px 80px rgba(0, 0, 0, 0.12);
+      .notification-title {
+        font-family: "Montserrat", sans-serif;
+        font-size: 20px;
+        font-weight: bolder;
+        margin-bottom: 10px;
       }
-      .active {
-        display: inline;
+      .notification-container {
+        overflow-y: auto;
+        height: 60vh;
+        &::-webkit-scrollbar {
+          width: 10px;
+          background-color: none;
+          border-radius: 10px;
+        }
+        &::-webkit-scrollbar-track {
+          background-color: none;
+        }
+        &::-webkit-scrollbar-thumb {
+          background-color: rgb(207, 207, 207);
+          border-radius: 10px;
+        }
       }
     }
-    .write {
-      position: relative;
+    .active {
+      display: inline;
+    }
+  }
+  .write {
+    .write-option {
+      z-index: 9999;
+      display: none;
+      width: 130px;
+      top: 50px;
+      left: -10px;
       border-radius: 4px;
-      padding: 20px 30px;
-      display: inline-block;
-      position: relative;
-      .write-title {
-        padding: 20px 30px;
-        &:hover {
-          background-color: $persik-navigation-hover-background-color;
-        }
-      }
-      .write-option {
-        z-index: 9999;
-        display: none;
-        position: absolute;
-        background-color: white;
-        width: 130px;
-        top: 50px;
-        left: -10px;
-        padding: 10px;
-        border-radius: 4px;
-        box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048),
-          0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-          0 100px 80px rgba(0, 0, 0, 0.12);
-        li {
-          padding: 10px;
-          display: block;
-          &:hover {
-            background-color: #f4f4f7;
-          }
-        }
-      }
-      &:hover {
-        background-color: #f4f4f7;
-      }
-      &:hover > .write-option {
-        display: inline;
-      }
+      box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+        0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+        0 100px 80px rgba(0, 0, 0, 0.12);
+    }
+    &:hover > .write-option {
+      display: inline;
     }
   }
 }

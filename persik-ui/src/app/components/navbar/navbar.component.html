@@ -1,46 +1,36 @@
-<nav class="bg-white-500 flex items-center justify-between flex-wrap py-1 px-6">
+<nav class="bg-white-500 flex items-center phone:p-4 phone:w-screen laptop:py-2 laptop:px-36">
   <div class="flex items-center flex-shrink-0 text-white mr-6">
     <span>🍑</span>
     <span class="font-semibold text-black text-xl tracking-tight">Persik</span>
   </div>
-  <div class="block lg:hidden">
-    <button
-      class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
-      <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-        <title>Menu</title>
-        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-      </svg>
-    </button>
-  </div>
-  <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto ">
-    <div class="text-sm lg:flex-grow space-x-0">
-      <a href="/" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 mr-4">
+  <div class="phone:hidden laptop:inline">
+    <nav class="flex flex-row text-sm">
+      <a href="/" class="inline-block text-teal-20 mr-4">
         <div class="flex px-6 py-4 content-center items-center lg:inline-block hover:bg-gray-100 rounded-lg">Home</div>
       </a>
-      <a href="/anonymous" class="block mt-4 lg:inline-block lg:mt-0 text-teal-20 mr-4">
+      <a href="/anonymous" class="inline-block text-teal-20 mr-4">
         <div class="flex px-6 py-4 content-center items-center lg:inline-block hover:bg-gray-100 rounded-lg">Anonymous
         </div>
       </a>
-      <a href="/poll" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 mr-4">
+      <a href="/poll" class="inline-block text-teal-200 mr-4">
         <div class="flex px-6 py-4 content-center items-center lg:inline-block hover:bg-gray-100 rounded-lg">Polls</div>
       </a>
-      <a href="/tag" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 mr-4">
+      <a href="/tag" class="inline-block text-teal-200 mr-4">
         <div class="flex px-6 py-4 content-center items-center lg:inline-block hover:bg-gray-100 rounded-lg">Tags</div>
       </a>
-    </div>
+    </nav>
   </div>
+  <div class="flex-grow"></div>
   <div class="account space-x-1">
-    <div class="shadow rounded-full flex flex-row ">
-      <input
-        class="rounded-full border border-transparent focus:outline-none"
-        placeholder="Search...">
-      <button class="rounded-full h-10 w-10">🔍</button>
+    <div class="shadow rounded-full flex flex-row pl-4">
+      <input class="rounded-full border border-transparent focus:outline-none" placeholder="Search...">
+      <button class="rounded-full h-10 w-10 hover:bg-gray-200">🔍</button>
     </div>
-    <div class="ml-2">
+    <div class="phone:hidden laptop:inline">
       <button>📭</button>
     </div>
-    <div class="notification-container">
-      <button (click)="activeNotification()">🔔</button>
+    <div class="notification-container relative">
+      <button (click)="activeNotification()" class="phone:hidden laptop:inline">🔔</button>
       <div class="notification" [class]="notificationActive">
         <div class="notification-title">
           <span>Notifications</span>
@@ -53,19 +43,19 @@
       </div>
     </div>
     <div class="avatar">
-      <div class="relative w-16 h-16">
+      <div class="relative w-10 h-10">
         <img class="rounded-full border border-gray-100 shadow-sm"
           src="../../../assets/images/julian-wan-WNoLnJo7tS8-unsplash.jpg" alt="">
       </div>
     </div>
-    <div class="write">
+    <div class="phone:hidden laptop:inline-block laptop:px-6 laptop:py-4 laptop:rounded-lg laptop:hover:bg-gray-100 write relative">
       <span>Write</span>
-      <ul class="write-option">
+      <ul class="write-option bg-white absolute p-2">
         <a href="/write-post">
-          <li><span>📃</span> A Post</li>
+          <li class="p-2 block hover:bg-gray-100"><span>📃</span> A Post</li>
         </a>
         <a href="/write-poll">
-          <li><span>📊</span> A Poll</li>
+          <li class="p-2 block hover:bg-gray-100"><span>📊</span> A Poll</li>
         </a>
       </ul>
     </div>
